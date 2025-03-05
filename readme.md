@@ -60,9 +60,6 @@ The system's customized budgeting tools, which assist users in setting spending 
 - MultiPage Website
 - Responsive Website
 - Intuitive Navigation
-- Budget Management 
-- Expense Tracking 
-- Exportable Reports
 
 
 ### Technology
