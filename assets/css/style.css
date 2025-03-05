@@ -41,7 +41,7 @@ body {
   .design-ten ul {
     display: flex;
     align-items: center;
-    margin-left: 30dvh;
+    margin-left: flex;
 }
 
 /* NAVIGATION ITEMS */
