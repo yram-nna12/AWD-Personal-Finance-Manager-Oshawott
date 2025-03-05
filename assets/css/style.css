@@ -22,7 +22,7 @@ body {
     padding: 0 20px;
     position: relative;
   }
-  
+
   .design-ten .logo {
     display: flex;
     align-items: center;
@@ -42,6 +42,7 @@ body {
     display: flex;
     align-items: center;
     margin-left: flex;
+    
 }
 
 /* NAVIGATION ITEMS */
@@ -111,7 +112,7 @@ body {
     border-radius: 5px;
     z-index: 1000;
     padding: 10px 0;
-    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    
 }
 
 /* Show dropdown only on hover */
@@ -190,6 +191,7 @@ a.btn.login-btn{
   .design-ten .hamburger {
     position: relative;
     color: #0C3A1C;
+    margin-left: -40dvh;
   }
   
   .design-ten .hamburger-toggle {
