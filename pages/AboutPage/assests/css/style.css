@@ -10,7 +10,6 @@ body {
     font-family: 'Poppins';
     overflow-x: hidden;
 }
-
 /* NAVIGATION BAR */
 .design-ten {
     background: white;
@@ -191,7 +190,7 @@ a.btn.login-btn{
   .design-ten .hamburger {
     position: relative;
     color: #0C3A1C;
-    margin-left: -40dvh;
+    margin-left: -70dvh;
   }
   
   .design-ten .hamburger-toggle {
@@ -237,6 +236,7 @@ a.btn.login-btn{
     .logo {
       height: 80px;
     }
+
 
 /* First Hero Section */
 .about-hero {
