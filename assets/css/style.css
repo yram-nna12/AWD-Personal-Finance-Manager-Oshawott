@@ -9,10 +9,12 @@
 body {
     font-family: 'Poppins';
     overflow-x: hidden;
+    
 }
 
+
 /* NAVIGATION BAR */
-.design-ten {
+.navigation-bar {
     background: white;
     height: 74px;
     width: 100%;
@@ -20,16 +22,17 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
-    position: relative;
+    position: fixed;
+    z-index: 9999;
   }
 
-  .design-ten .logo {
+  .navigation-bar .logo {
     display: flex;
     align-items: center;
 
   }
   
-  .design-ten .logo-img {
+  .navigation-bar .logo-img {
     width: 110px;
     height: auto;
     margin-left: 5rem;
@@ -38,7 +41,7 @@ body {
 
 
 
-  .design-ten ul {
+  .navigation-bar ul {
     display: flex;
     align-items: center;
     margin-left: flex;
@@ -46,13 +49,13 @@ body {
 }
 
 /* NAVIGATION ITEMS */
-.design-ten ul li {
+.navigation-bar ul li {
     list-style: none;
     margin-left: 20px;
 }
 
 /* DEFAULT NAVIGATION LINKS */
-.design-ten ul li a {
+.navigation-bar ul li a {
     position: relative;
     padding: 10px 15px;
     text-decoration: none;
@@ -60,19 +63,19 @@ body {
     font-size: 12px;
 }
 
-.design-ten .active{
+.navigation-bar .active{
     color: #638B35;
 }
 
-.design-ten ul li a:hover {
+.navigation-bar ul li a:hover {
 
     color: #638B35;
 
 }
 
 /* ACTIVE LINK (Home) - Underline */
-.design-ten ul li a.active::after,
-.design-ten ul li a:hover::after {
+.navigation-bar ul li a.active::after,
+.navigation-bar li a:hover::after {
     content: "";
     display: block;
     width: 100%;
@@ -86,8 +89,8 @@ body {
 
 
 /* Disable Underline for Buttons */
-.design-ten ul li a.login-btn::after,
-.design-ten ul li a.signup-btn::after {
+.navigation-bar ul li a.login-btn::after,
+.navigation-bar ul li a.signup-btn::after {
     display: none !important;
 }
 
@@ -188,29 +191,29 @@ a.btn.login-btn{
 
 
 
-  .design-ten .hamburger {
+  .navigation-bar .hamburger {
     position: relative;
     color: #0C3A1C;
-    margin-left: -40dvh;
+    margin-left: -70dvh;
   }
   
-  .design-ten .hamburger-toggle {
+  .navigation-bar .hamburger-toggle {
     font-size: 18px;
     background: none;
     border: none;
     cursor: pointer;
   }
 
-  .design-ten .hamburger-toggle:hover {
+  .navigation-bar .hamburger-toggle:hover {
     color: #348751;
   }
   
-  .design-ten .hamburger-toggle i {
+  .navigation-bar .hamburger-toggle i {
     font-size: 20px;
     margin-left: 30px;
   }
   
-  .design-ten .hamburger-menu {
+  .navigation-bar .hamburger-menu {
     position: absolute;
     top: calc(100% + 5px);
     right: -20px; 
@@ -222,15 +225,15 @@ a.btn.login-btn{
     display: none;
   }
   
-  .design-ten .hamburger:hover .hamburger-menu {
+  .navigation-bar .hamburger:hover .hamburger-menu {
     display: block;
   }
   
-  .design-ten .hamburger-menu li {
+  .navigation-bar .hamburger-menu li {
     padding: 15px;
   }
   
-  .design-ten .hamburger-menu li:hover {
+  .navigation-bar .hamburger-menu li:hover {
     background-color: #f0f0f0;
   }
   
@@ -238,194 +241,14 @@ a.btn.login-btn{
       height: 80px;
     }
 
-/* --- RESPONSIVE NAVIGATION (Mobile View) --- */
-@media (max-width: 900px) {
-    /* Show Hamburger Menu */
-    .checkbtn {
-        display: block;
-        z-index: 1100;
-    }
-
-    /* HIDE NAVIGATION LINKS INITIALLY */
-    nav ul {
-        position: absolute;
-        top: 80px;
-        left: -100%;
-        width: 100%;
-        background: white;
-        flex-direction: column;
-        align-items: center;
-        transition: left 0.3s ease-in-out;
-        z-index: 1000;
-        padding: 0;
-    }
-
-    /* SHOW MENU WHEN CHECKED */
-    #check:checked ~ ul {
-        left: 0;
-    }
-
-    /* STYLE NAVIGATION ITEMS */
-    nav ul li {
-        width: 100%;
-        text-align: center;
-        margin: 10px 0;
-    }
-
-    nav ul li a {
-        display: block;
-        padding: 15px;
-        font-size: 18px;
-        width: 100%;
-    }
-
-    /* Adjust Button Styles */
-    .login-btn, .signup-btn {
-        width: 80%;
-        text-align: center;
-        padding: 12px;
-        display: inline-block;
-    }
-}
-
-
-/*ipad*/
-@media screen and (max-width: 1024px) {
-    .hero h1 {
-        font-size: 48px;
-        font-weight: bold;
-        line-height: 1.2;
-    }
-
-    nav {
-        padding: 10px 0;
-    }
-
-    label.logo {
-        font-size: 30px;
-        padding: 0 50px;
-    }
-
-    nav ul {
-        float: none;
-        text-align: center;
-        margin: 0;
-        padding: 0;
-    }
-
-    nav ul li {
-        display: block;
-        line-height: 50px;
-        margin: 10px 0;
-    }
-
-    nav ul li a {
-        font-size: 16px;
-        display: block;
-        width: 100%;
-        padding: 10px;
-    }
-
-    .checkbtn {
-        display: block;
-    }
-
-    #check:checked ~ ul {
-        display: block;
-    }
-
-    nav ul {
-
-        display: none;
-        width: 100%;
-        background: #B1D5C0;
-        position: absolute;
-        top: 80px;
-        left: 0;
-        text-align: center;
-    }
-
-}
 
 
 
-@media (max-width: 952px){
-    label.logo{
-        font-size: 30px;
-        padding-left: 50px;
-    }
-    nav ul li a{
-        font-size: 16px;
-    }
-}
-
-@media (max-width: 858px){
-    .checkbtn{
-        display: block;
-    }
-    ul{
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        background: #B1D5C0;
-        top: 80px;
-        left: -100%;
-        text-align: center;
-        transition: all .5s;
-    }
-    nav ul li{
-        display: block;
-        margin: 50px 0;
-        line-height: 30px;
-    }
-    nav ul li a{
-        font-size: 20px;
-    }
-    a:hover,a.active{
-        background: none;
-        color: black;
-    }
-    #check:checked ~ ul {
-        left: 0;
-    }
-}
-
-@media screen and (max-width: 480px) { /* iPhones & small screens */
-    .hero {
-        width: 100%;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        background: linear-gradient(135deg, #638B35, #2c8c5e);
-    }
-
-    .hero .content {
-        max-width: 100%;
-    }
-
-    .hero h1 {
-        font-size: 32px;
-        font-weight: bold;
-        line-height: 1.3;
-    }
-
-    .hero h1.highlight {
-        color: #b8f1c2;
-    }
-
-    .hero h4 {
-        font-size: 16px;
-        font-weight: 300;
-        max-width: 100%; /* Ensure no overflow */
-        margin-top: 10px;
-    }
-}
 
 
-/* Full-Screen Hero Section */
+
+
+    /* Full-Screen Hero Section */
 
 .hero {
     width: 100%;
@@ -442,12 +265,13 @@ a.btn.login-btn{
 
 
 .hero .content {
-    max-width: 600px;
+    max-width: 700px;
     text-align: left;
+    margin-top: 6rem;
 }
 
 .hero h1 {
-    font-size: 48px;
+    font-size: 58px;
     font-weight: bold;
     line-height: 1.2;
 }
@@ -457,10 +281,11 @@ a.btn.login-btn{
 }
 
 .hero h4 {
-    font-size: 18px;
-    font-weight: 300;
+    font-size: 28px;
+    font-weight: 100;
     margin-top: 10px;
-    max-width: 500px;
+    max-width: 800px;
+    font-style: italic;
 }
 
 
@@ -480,40 +305,19 @@ a.btn.login-btn{
 }
 
 
-@media screen and (max-width: 1024px) {
-    section {
-        background-size: contain;
-        height: auto; 
-        min-height: 70vh;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    section {
-        background-size: cover;
-        min-height: 60vh;
-    }
-}
-
-@media screen and (max-width: 480px) { 
-    section {
-        background-size: contain;
-        min-height: 50vh;
-        background-position: center top; 
-    }
-}
-
-
 .hero2 {
     width: 100%;
     background: #ffffff;
-    padding: 100px 5%; /* Increased top space */
     z-index: 1;
+    
 }
 
 .container {
     display: flex;
     flex-direction: column;
+    padding: 60px 0; /* Removes side padding */
+    max-width: 1400px;
+    margin: auto;
 }
 
 .content-box {
@@ -525,6 +329,9 @@ a.btn.login-btn{
 .text {
     width: 50%;
     text-align: left;
+    text-align: center;
+    padding-right: 100px;
+    
 }
 
 .text h5 {
@@ -543,7 +350,8 @@ a.btn.login-btn{
 }
 
 .text h2 span {
-    color: #1F7A46; /* Green highlight */
+    color: #3C9E50; /* Green highlight */
+    display: block;
 }
 
 .text p {
@@ -555,6 +363,7 @@ a.btn.login-btn{
 .text {
     width: 50%;
     text-align: left;
+    max-width: 150rem;
 }
 
 .text h5 {
@@ -572,10 +381,6 @@ a.btn.login-btn{
     margin-bottom: 15px;
 }
 
-.text h2 span {
-    color: #1F7A46; /* Green highlight */
-}
-
 .text p {
     font-size: 16px;
     color: #555;
@@ -585,16 +390,17 @@ a.btn.login-btn{
 .btn1 {
     display: inline-block;
     padding: 12px 24px;
-    background: #1F7A46;
+    background: linear-gradient(to right, #0d3b20, #88a678);
     color: white;
     font-size: 14px;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
+    
 }
 
 .btn1:hover {
-    background: #14532D;
+    background: linear-gradient(to right, #88a678, #0d3b20);
 }
 
 .image {
@@ -616,7 +422,7 @@ a.btn.login-btn{
 .text2 {
     width: 50%;
     text-align: left;
-    padding-left: 20px;
+    padding-left: 5rem;
 }
 
 .text2 h5 {
@@ -634,9 +440,6 @@ a.btn.login-btn{
     margin-bottom: 15px;
 }
 
-.text2 h2 span {
-    color: #1F7A46; /* Green highlight */
-}
 
 .text2 p {
     font-size: 16px;
@@ -665,7 +468,8 @@ a.btn.login-btn{
 }
 
 .text2 h2 span {
-    color: #1F7A46; /* Green highlight */
+    color: #3C9E50; /* Green highlight */
+    display: block;
 }
 
 .text2 p {
@@ -677,7 +481,7 @@ a.btn.login-btn{
 .btn2 {
     display: inline-block;
     padding: 12px 24px;
-    background: #1F7A46;
+    background: linear-gradient(to right, #0d3b20, #88a678);
     color: white;
     font-size: 14px;
     text-decoration: none;
@@ -686,7 +490,8 @@ a.btn.login-btn{
 }
 
 .btn2:hover {
-    background: #14532D;
+    background: linear-gradient(to right, #88a678, #0d3b20);
+    
 }
 
 .image {
@@ -698,61 +503,6 @@ a.btn.login-btn{
     border-radius: 5px;
 }
 
-
-/* Responsive Styles */
-@media screen and (max-width: 1024px) {
-    .content-box {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .text, .image {
-        width: 100%;
-    }
-
-    .text {
-        text-align: center;
-    }
-}
-
-/* Mobile (phones) */
-@media screen and (max-width: 768px) {
-    .hero2 {
-        padding: 80px 5%; /* Adjusted padding for smaller screens */
-    }
-
-    .container {
-        gap: 40px;
-    }
-
-    .text h2 {
-        font-size: 24px;
-    }
-
-    .text p {
-        font-size: 14px;
-    }
-
-    .btn {
-        font-size: 13px;
-        padding: 10px 20px;
-    }
-}
-
-/* Mac & Windows (Large screens) */
-@media screen and (min-width: 1440px) {
-    .hero2 {
-        padding: 120px 15%;
-    }
-
-    .container {
-        max-width: 1400px;
-        margin: auto;
-    }
-}
-
-
-
 .hero3-top {
     background-color: #124C25;
     color: #ffffff;
@@ -760,24 +510,22 @@ a.btn.login-btn{
     text-align: left;
 }
 .hero3-top h1 {
-    font-size: 2rem;
+    font-size: 3rem;
     margin-bottom: 10px;
     margin-left: 3rem;
 }
 .hero3-top h5 {
     font-size: 1.2rem;
     font-weight: 300;
-    max-width: 800px;
+    max-width: 1500px;
     margin: 0;
     margin-left: 3rem;
     
 }
 
-
 .hero3 {
     background-color: white;
     color: #ffffff;
-    margin-bottom: -150px;
   }
   
   .hero3 .roww {
@@ -825,10 +573,12 @@ a.btn.login-btn{
     background-size: cover;
     background-position: center;
 }
-  
 
   .card .img1 {
     background-image: url('/assets/img/Budget\ Pic.png');
+    background-size: contain; /* Ensures the full image is visible */
+    background-repeat: no-repeat; /* Prevents image from repeating */
+    background-position: center; /* Centers the image */
   }
   
   .card .img-hover1 {
@@ -837,6 +587,9 @@ a.btn.login-btn{
   
   .card .img2 {
     background-image: url('/assets/img/Expense\ \ Pic.png');
+    background-size: contain; /* Ensures the full image is visible */
+    background-repeat: no-repeat; /* Prevents image from repeating */
+    background-position: center; /* Centers the image */
   }
   
   .card .img-hover2 {
@@ -845,6 +598,9 @@ a.btn.login-btn{
   
   .card .img3 {
     background-image: url('/assets/img/Goal\ Pic.png');
+    background-size: contain; /* Ensures the full image is visible */
+    background-repeat: no-repeat; /* Prevents image from repeating */
+    background-position: center; /* Centers the image */
   }
   
   .card .img-hover3 {
@@ -853,30 +609,17 @@ a.btn.login-btn{
 
   .card .img4 {
     background-image: url('/assets/img/Report\ Pic.png');
+    background-size: contain; /* Ensures the full image is visible */
+    background-repeat: no-repeat; /* Prevents image from repeating */
+    background-position: center; /* Centers the image */
 }
 
   .card .img-hover4 {
     background-image: url('../img/luxury2.jpg');
 }
 
-@media (max-width: 1024px) {
-    .column {
-        flex: 1 1 calc(50% - 20px); /* 2 cards per row on tablets */
-    }
-}
-
-@media (max-width: 600px) {
-    .column {
-        flex: 1 1 100%; /* Full width on small screens */
-    }
-}
-
 .hero4 {
     background-color: #ffffff;
-    padding: 30px 10%;
-    margin-top: 14rem;
-    margin-bottom: 4rem;
-    margin-left: 9rem;
 }
 
 .hero4-container {
@@ -884,12 +627,18 @@ a.btn.login-btn{
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap; /* Allows content to adjust on smaller screens */
+    padding: 0 5%; /* Adds padding on both left and right sides */
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    margin-left: 2rem;
+    margin-right: 0%;
+    padding-right: 0;
 }
 
 .hero4-text {
-    flex: 1;
-    max-width: 600px;
-    margin-left: -5rem;
+    flex: 1.5;
+    max-width: 50%;
+    margin: 0;
 }
 
 .hero4-text h2 {
@@ -905,7 +654,7 @@ a.btn.login-btn{
 }
 
 .hero4 h2 .hero4-h2 {
-    color: #0F3714 !important;
+    color: #0F3714;
     font-weight: bold;
 }
 
@@ -914,72 +663,21 @@ a.btn.login-btn{
     color: #333;
     margin-top: 10px;
     line-height: 1.6;
+    max-width: 605px;
 }
 
 .hero4-image {
     flex: 1;
     display: flex;
     justify-content: center;
+    
 }
 
 .hero4-image img {
-    max-width: 65%;
+    max-width: 50%;
     height: auto;
 }
 
-/* Responsive Styles */
-@media (max-width: 1024px) {
-    .hero4 {
-        padding: 40px 5%;
-    }
-    
-    .hero4-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero4-text {
-        margin-left: 0;
-        max-width: 100%;
-    }
-
-    .hero4-text h2 {
-        font-size: 2rem; /* Adjusts for tablets */
-    }
-
-    .hero4-text p {
-        font-size: 1.1rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .hero4-text h2 {
-        font-size: 1.8rem; /* Smaller text for tablets & smaller devices */
-    }
-
-    .hero4-text p {
-        font-size: 1rem;
-    }
-
-    .hero4-image img {
-        max-width: 90%;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero4 {
-        padding: 30px 5%;
-        margin-top: 10rem;
-    }
-
-    .hero4-text h2 {
-        font-size: 1.6rem; /* Mobile-friendly heading */
-    }
-
-    .hero4-text p {
-        font-size: 0.95rem;
-    }
-}
 
 .hero5 {
     background: url(/assets/img/Report\ section\ Bg.png) no-repeat center center;
@@ -1004,8 +702,13 @@ a.btn.login-btn{
 }
 /* Responsive text adjustments */
 .hero5-content h1 {
-    font-size: 2.5rem; /* Default for large screens */
+    font-size: 3rem; /* Maintain large font size */
+    white-space: nowrap; /* Prevents text from wrapping */
+    overflow: hidden; /* Ensures no extra overflow */
+    text-align: center; /* Center align text */
+    display: block; /* Ensure full width usage */
 }
+
 
 .hero5-content p {
     margin-bottom: 1rem;
@@ -1030,122 +733,115 @@ a.btn.login-btn{
 }
 
 
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-    .hero5 {
-        height: auto;
-        padding: 40px 20px;
-    }
-    
-    .hero5-content h1 {
-        font-size: 2rem; /* Adjust for smaller screens */
-    }
-
-    .hero5-content p {
-        font-size: 1rem; /* Adjust for smaller screens */
-    }
-
-    .hero5-container {
-        width: 100%;
-        padding: 0 15px;
-    }
-}
-
 /* Footer Styles */
+
 .footer {
-    background-color: #1B3F1F;
+    background-color: #1B3F1F; 
     color: white;
     padding: 50px 15px;
     font-family: 'Poppins';
-    }
-    
-    .footer-container {
+}
+
+.footer-container {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     max-width: 1200px;
     margin: 0 auto;
     flex-wrap: wrap;
-    }
-    
-    /* Left Section */
-    .footer-left {
+}
+
+/* Left Section */
+.footer-left {
     max-width: 500px;
-    margin-bottom: 30px;
-    }
-    
-    .logo-footer img {
+}
+
+.logo-footer img {
     height: 70px;
     width: auto;
-    }
-    
-    .footer-text {
+}
+
+.footer-text {
     font-size: 14px;
-    font-family: 'Poppins';
+    font-family: 'poppins';
     color: #ddd;
     margin-top: 10px;
-    }
-    
-    .social-icons {
+}
+
+.social-icons {
     margin-top: 15px;
     display: flex;
     gap: 12px;
-    }
-    
-    .social-icons a img {
+}
+
+.social-icons a img {
     width: 35px;
     height: 35px;
-    }
-    
-    /* Right Section */
-    .footer-right {
+}
+
+.social-icons a img,
+.footer-right ul li a img {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Scale effect with a slight brightness adjustment */
+.social-icons a:hover img,
+.footer-right ul li a:hover img {
+    transform: scale(1.1); /* Slightly enlarges the icon */
+    filter: brightness(1.3); /* Increases brightness to highlight */
+}
+
+
+/* Right Section */
+.footer-right {
     text-align: left;
-    }
-    
-    .footer-right h3 {
+}
+
+.footer-right h3 {
     color: #279B48;
     font-size: 18px;
     margin-bottom: 12px;
     padding-left: 10px;
-    }
-    
-    .footer-right ul {
+}
+
+.footer-right ul {
     list-style: none;
     padding: 0;
-    }
-    
-    .footer-right ul li {
+}
+
+.footer-right ul li {
     display: flex;
     align-items: center;
     gap: 10px;
     font-size: 14px;
     color: #ddd;
     margin-bottom: 8px;
-    }
-    
-    .footer-right ul img {
+}
+
+.footer-right ul img {
     width: 35px;
     height: 35px;
-    }
-    
-    /* Footer Bottom */
-    .footer-bottom {
+}
+
+
+.footer-bottom {
     position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-top: 1px solid #ccc;
-    padding: 20px 40px;
+    padding: 20px 40px; 
     padding-top: 10px;
     margin-top: 20px;
     font-size: 14px;
     color: #ccc;
-    max-width: 90%;
+    max-width: 90%; 
     margin-left: auto;
     margin-right: auto;
-    }
-    
-    .footer-bottom::before, .footer-bottom::after {
+}
+
+.footer-bottom::before,
+.footer-bottom::after {
     content: "";
     position: absolute;
     top: -4px;
@@ -1153,67 +849,24 @@ a.btn.login-btn{
     height: 6px;
     background-color: #ccc;
     border-radius: 50%;
-    }
-    
-    .footer-bottom::before {
+}
+
+.footer-bottom::before {
     left: 0;
-    }
-    
-    .footer-bottom::after {
+}
+
+.footer-bottom::after {
     right: 0;
-    }
-    
-    .footer-links a {
+}
+
+
+.footer-links a {
     color: white;
     margin-left: 20px;
     text-decoration: none;
     font-size: 14px;
-    }
-    
-    .footer-links a:hover {
+}
+
+.footer-links a:hover {
     text-decoration: underline;
-    }
-    
-    /* Responsive Design */
-    @media (max-width: 768px) {
-    .footer-container {
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    }
-    
-    .footer-left, .footer-right {
-    margin-bottom: 25px;
-    max-width: 100%;
-    }
-    
-    .footer-bottom {
-    flex-direction: column;
-    text-align: center;
-    }
-    
-    .footer-links {
-    margin-top: 10px;
-    }
-    
-    .footer-text {
-    font-size: 13px; /* Adjust font size for better readability on mobile */
-    }
-    
-    .footer-right h3 {
-    font-size: 16px; /* Slightly smaller header on mobile */
-    }
-    
-    .footer-right ul li {
-    font-size: 13px; /* Adjust text size for smaller devices */
-    }
-    
-    .footer-bottom {
-    padding: 15px; /* Reduce padding for smaller screens */
-    }
-    
-    .social-icons a img {
-    width: 30px;
-    height: 30px; /* Resize icons for smaller screens */
-    }
-    }
+}

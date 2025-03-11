@@ -1,16 +1,20 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.querySelector(".mobile-menu-toggle");
+    const menuContainer = document.querySelector(".mobile-menu-container");
+    const closeButton = document.querySelector(".mobile-menu-close");
 
+    menuToggle.addEventListener("click", function () {
+        menuContainer.classList.toggle("open");
+    });
 
-document.querySelector('.hamburger-toggle').addEventListener('click', function(event) {
-    event.preventDefault();
-    let menu = document.querySelector('.hamburger-menu');
-    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    closeButton.addEventListener("click", function () {
+        menuContainer.classList.remove("open");
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener("click", function (event) {
+        if (!menuContainer.contains(event.target) && !menuToggle.contains(event.target)) {
+            menuContainer.classList.remove("open");
+        }
+    });
 });
-
-// Close menu when clicking outside
-document.addEventListener('click', function(event) {
-    let isClickInside = document.querySelector('.hamburger').contains(event.target);
-    if (!isClickInside) {
-        document.querySelector('.hamburger-menu').style.display = 'none';
-    }
-});
-
