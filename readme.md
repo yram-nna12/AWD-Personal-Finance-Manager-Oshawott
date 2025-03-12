@@ -60,6 +60,9 @@ The system's customized budgeting tools, which assist users in setting spending 
 - MultiPage Website
 - Responsive Website
 - Intuitive Navigation
+- Interactive Elements
+- Content Flexibility
+- Typography
 
 
 ### Technology
