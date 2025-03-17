@@ -260,7 +260,7 @@ a.btn.login-btn{
     color: white;
     font-family: Arial, sans-serif;
     padding: 9rem 10%; /* Reduced top padding */
-    background: url(/assets/img/Herosection1\ Bg.png) no-repeat center center;
+    background: url(../img/Herosection1\ Bg.png) no-repeat center center;
     background-size: cover;
     width: 100%;
     display: flex;
@@ -566,7 +566,7 @@ a.btn.login-btn{
 }
 
   .card .img1 {
-    background-image: url('/assets/img/Budget\ Pic.png');
+    background-image: url('../img/Budget\ Pic.png');
     background-size: contain; /* Ensures the full image is visible */
     background-repeat: no-repeat; /* Prevents image from repeating */
     background-position: center; /* Centers the image */
@@ -577,7 +577,7 @@ a.btn.login-btn{
   }
   
   .card .img2 {
-    background-image: url('/assets/img/Expense\ \ Pic.png');
+    background-image: url('../img/Expense\ \ Pic.png');
     background-size: contain; /* Ensures the full image is visible */
     background-repeat: no-repeat; /* Prevents image from repeating */
     background-position: center; /* Centers the image */
@@ -588,7 +588,7 @@ a.btn.login-btn{
   }
   
   .card .img3 {
-    background-image: url('/assets/img/Goal\ Pic.png');
+    background-image: url('../img/Goal\ Pic.png');
     background-size: contain; /* Ensures the full image is visible */
     background-repeat: no-repeat; /* Prevents image from repeating */
     background-position: center; /* Centers the image */
@@ -599,7 +599,7 @@ a.btn.login-btn{
   }
 
   .card .img4 {
-    background-image: url('/assets/img/Report\ Pic.png');
+    background-image: url('../img/Report\ Pic.png');
     background-size: contain; /* Ensures the full image is visible */
     background-repeat: no-repeat; /* Prevents image from repeating */
     background-position: center; /* Centers the image */
@@ -671,7 +671,7 @@ a.btn.login-btn{
 
 
 .hero5 {
-    background: url(/assets/img/Report\ section\ Bg.png) no-repeat center center;
+    background: url(../img/Report\ section\ Bg.png) no-repeat center center;
     background-size: cover;
     height: calc(100vh - 80px);
     width: 100%;
@@ -1344,7 +1344,7 @@ a.btn.login-btn{
     /*HERO1*/
     .hero {
         width: 100%;
-        background-image: url(/assets/img/Herosection1\ Bg.png) no-repeat center;
+        background-image: url(../img/Herosection1\ Bg.png) no-repeat center;
         min-height: 70vh;
         color: white;
         font-family: Arial, sans-serif;
@@ -1584,7 +1584,7 @@ a.btn.login-btn{
     }
     
       .card .img1 {
-        background-image: url('/assets/img/Budget\ Pic.png');
+        background-image: url('../img/Budget\ Pic.png');
         background-size: contain; /* Ensures the full image is visible */
         background-repeat: no-repeat; /* Prevents image from repeating */
         background-position: center; /* Centers the image */
@@ -1595,7 +1595,7 @@ a.btn.login-btn{
       }
       
       .card .img2 {
-        background-image: url('/assets/img/Expense\ \ Pic.png');
+        background-image: url('../img/Expense\ \ Pic.png');
         background-size: contain; /* Ensures the full image is visible */
         background-repeat: no-repeat; /* Prevents image from repeating */
         background-position: center; /* Centers the image */
@@ -1606,7 +1606,7 @@ a.btn.login-btn{
       }
       
       .card .img3 {
-        background-image: url('/assets/img/Goal\ Pic.png');
+        background-image: url('../img/Goal\ Pic.png');
         background-size: contain; /* Ensures the full image is visible */
         background-repeat: no-repeat; /* Prevents image from repeating */
         background-position: center; /* Centers the image */
@@ -1617,7 +1617,7 @@ a.btn.login-btn{
       }
     
       .card .img4 {
-        background-image: url('/assets/img/Report\ Pic.png');
+        background-image: url('../img/Report\ Pic.png');
         background-size: contain; /* Ensures the full image is visible */
         background-repeat: no-repeat; /* Prevents image from repeating */
         background-position: center; /* Centers the image */
@@ -1694,7 +1694,7 @@ a.btn.login-btn{
     }
     
     .hero5 {
-        background: url(/assets/img/Report\ section\ Bg.png) no-repeat center center;
+        background: url(../img/Report\ section\ Bg.png) no-repeat center center;
         background-size: cover;
         height: calc(10vh- 110px);
         width: 100%;
@@ -2067,7 +2067,7 @@ a.btn.login-btn{
     flex-direction: column;
     justify-content: center;
     padding: 20rem 10%;
-    background: url(/assets/img/Herosection1\ Bg.png) no-repeat center top;
+    background: url(../img/Herosection1\ Bg.png) no-repeat center top;
     background-size: contain; /* Ensures the entire image fits */
     color: white;
    font-family: Arial, sans-serif;
@@ -2329,13 +2329,13 @@ a.btn.login-btn{
   background-repeat: no-repeat;
 }
 
-.card .img1 { background-image: url('/assets/img/Budget\ Pic.png'); }
+.card .img1 { background-image: url('../img/Budget\ Pic.png'); }
 .card .img-hover1 { background-image: url('../img/classic2.jpg'); }
-.card .img2 { background-image: url('/assets/img/Expense\ \ Pic.png'); }
+.card .img2 { background-image: url('../img/Expense\ \ Pic.png'); }
 .card .img-hover2 { background-image: url('../img/quality2.jpg'); }
-.card .img3 { background-image: url('/assets/img/Goal\ Pic.png'); }
+.card .img3 { background-image: url('../img/Goal\ Pic.png'); }
 .card .img-hover3 { background-image: url('../img/innovative2.jpg'); }
-.card .img4 { background-image: url('/assets/img/Report\ Pic.png'); }
+.card .img4 { background-image: url('../img/Report\ Pic.png'); }
 .card .img-hover4 { background-image: url('../img/luxury2.jpg'); }
 
 
@@ -2405,7 +2405,7 @@ a.btn.login-btn{
 .hero5 {
   width: 100%;
   justify-content: center;
-  background: url(/assets/img/Report\ section\ Bg.png) no-repeat center top;
+  background: url(../img/Report\ section\ Bg.png) no-repeat center top;
   background-size: contain; /* Ensures the entire image fits */
   color: white;
   font-family: Arial, sans-serif;
