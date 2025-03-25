@@ -9,7 +9,9 @@
 body {
     font-family: 'Poppins';
     overflow-x: hidden;
+    
 }
+
 
 /* NAVIGATION BAR */
 .navigation-bar {
@@ -21,6 +23,7 @@ body {
     justify-content: space-between;
     padding: 0 20px;
     position: fixed;
+    z-index: 9999;
   }
 
   .navigation-bar .logo {
@@ -28,7 +31,7 @@ body {
     align-items: center;
 
   }
-
+  
   .navigation-bar .logo-img {
     width: 110px;
     height: auto;
@@ -82,7 +85,6 @@ body {
     bottom: -5px;
     left: 0;
 }
-
 
 
 /* Disable Underline for Buttons */
@@ -185,6 +187,9 @@ a.btn.login-btn{
     border: none;
 }
 
+
+
+
   .navigation-bar .hamburger {
     position: relative;
     color: #0C3A1C;
@@ -235,289 +240,72 @@ a.btn.login-btn{
       height: 80px;
     }
 
+    
 
-/* First Hero Section */
-.about-hero {
-    padding: 5rem 10%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #ffffff;
-}
+    .login-container {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        background: url('../img/Bg.png') no-repeat center center;
+        background-size: cover;
+        padding: 110px;
+    }
+    .login-box {
+        color: white;
+        width: 500px;
+    }
+    .login-box .welcome {
+        font-size: 3rem;
+        font-weight: bold;
+    }
+    .login-box label {
+        display: block;
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+    .login-box input {
+        width: 100%;
+        padding: 12px;
+        border: none;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+    .login-box button {
+        width: 150px;
+        padding: 12px;
+        border: none;
+        border-radius: 8px;
+        background: #638B35;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        display: block;
+    }
 
-.about-content {
-    display: flex;
-    flex-wrap: wrap; 
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    gap: 2.5rem; 
-}
+    .login-box button:hover{
+        background-color: #204D0F;
+    }
+    .login-box p {
+        margin-top: 20px;
+        font-size: 14px;
+    }
+    .login-box a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
 
-/* Text Content */
-.text-content {
-    max-width: 50%;
-    flex: 1;
-    min-width: 18.75rem; 
-}
+    .login-link:hover {
+        color: green;
+    }
+    
 
-.breadcrumb {
-    font-size: 1rem; 
-    font-weight: 500;
-    color: #333;
-    margin-bottom: 1rem; 
-}
-
-.breadcrumb .highlight {
-    color: #4C8C4A;
-    font-weight: bold;
-}
-
-h1 {
-    font-size: 2.75rem; 
-    font-weight: 700;
-    color: #000;
-    margin: 0.625rem 0; 
-    line-height: 1.3;
-}
-
-h1 .highlight {
-    color: #4C8C4A;
-}
-
-.description {
-    font-size: 1.125rem; 
-    color: #444;
-    line-height: 1.7;
-    margin-top: 1rem; 
-    max-width: 90%;
-}
-
-/* Image Content */
-.img-content {
-    max-width: 40%;
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    min-width: 18.75rem; 
-}
-
-.img-content img {
-    width: 100%; 
-    max-width: 100%; 
-    height: auto; 
-}
-
-/* Second Section - Our Business */
-.about-hero-two {
-    background-color: #1E4D2B; 
-    padding: 5rem 10%; 
-    text-align: left;
-    color: #ffffff; 
-}
-
-.content-two {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin: 0 auto;
-}
-
-.business-title {
-    font-size: 2.25rem; 
-    font-weight: bold;
-    color: #ffffff;
-    margin-bottom: 1.25rem; 
-}
-
-.paragraph-two {
-    font-size: 1.125rem; 
-    color: #ffffff;
-    line-height: 1.8;
-}
-
-
-.paragraph-two:not(:last-child) {
-    margin-bottom: 1.25rem; 
-}
-
-/* Third Hero Section */
-.about-hero-three {
-    padding: 5rem 10%; 
-    text-align: left;
-}
-
-.content-three {
-    display: flex;
-    flex-direction: column; 
-    align-items: flex-start; 
-}
-
-.third-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #000;
-    margin: 0;
-}
-
-.paragraph-three {
-    margin-top: 0.9375rem; 
-    font-size: 1.125rem; 
-    color: #333;
-    line-height: 1.8;
-    margin-bottom: 5rem; 
-}
-
-/* Features Section */
-.features-container {
-    display: flex;
-    justify-content: center;
-    gap: 6.25rem; 
-}
-
-.feature-box {
-    text-align: center;
-    max-width: 18.75rem; 
-}
-
-.feature-box img {
-    width: 9.375rem; 
-    height: auto;
-    margin-bottom: 0.9375rem; 
-}
-
-.feature-box h3 {
-    font-size: 1.125rem; 
-    font-weight: bold;
-    margin-bottom: 0.625rem; 
-}
-
-.feature-box p {
-    font-size: 0.875rem; 
-    color: #666;
-    margin-bottom: 0.625rem; 
-}
-
-
-/* Mission Section */
-.mission-vision {
-    display: flex;
-    width: 100%;
-}
-
-/* Mission & Vision Section */
-.mission, .vision {
-    flex: 1; /* Makes both sections equal width */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    min-height: 18.75rem; 
-    padding: 3.75rem 9.375rem; 
-    color: white;
-}
-
-/* Background colors */
-.mission {
-    background-color: #406f4f; 
-}
-
-.vision {
-    background-color: #144D33; 
-}
-
-/* Heading Styles */
-.mission h2, .vision h2 {
-    font-size: 1.5rem; 
-    font-weight: bold;
-    text-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.5); 
-}
-
-
-/* Team Section */
-.team-section {
-    text-align: center;
-    padding: 5rem 1.25rem;
-}
-
-.team-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 0.625rem;
-}
-
-.highlight {
-    color: #16A34A; 
-}
-
-.team-description {
-    max-width: 56.25rem;
-    font-size: 1.125rem;
-    margin: 0 auto 1.875rem;
-    color: #333;
-}
-
-.team-container {
-    display: flex;
-    justify-content: center;
-    gap: 1.875rem;
-    flex-wrap: wrap;
-}
-
-.team-card {
-    background-color: #436A46;
-    padding: 0.9375rem;
-    border-radius: 1.5625rem;
-    width: 14.375rem;
-    height: 21.875rem;
-    text-align: center;
-    box-shadow: 0.25rem 0.25rem 0.625rem rgba(0, 0, 0, 0.15);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-    cursor: pointer;
-}
-
-.team-card:hover {
-    transform: translateY(-0.3125rem) scale(1.02);
-    background-color: #375A3C;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.35);
-}
-
-.team-image {
-    background-color: white;
-    width: 100%;
-    height: 18.75rem;
-    border-radius: 1.875rem 0 1.875rem 0;
-    margin-bottom: 0.9375rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-.team-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 1.875rem 0 1.875rem 0;
-}
-
-.team-name {
-    font-size: 1.125rem;
-    font-weight: bold;
-    color: white;
-    margin-bottom: 0.3125rem;
-}
-
-.team-role {
-    font-size: 0.875rem;
-    color: #DCE7DC;
-}
-
-/* Footer */
 
 .footer {
     background-color: #1B3F1F; 
@@ -647,9 +435,3 @@ h1 .highlight {
 .footer-links a:hover {
     text-decoration: underline;
 }
-
-
-
-
-
-
