@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQTrial</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navigation-bar">
+        <div class="logo">
+          <img src="./assets/img/Thumbnail.png" alt="" class="logo-img" />
+        </div>
+
+        <div class="header-nav">
+        <ul>
+            <li><a class="" href="../../index.html">Home</a></li>
+            <li><a href="#">Dashboard</a></li>
+            <li class="dropdown">
+                <a href="#">Finance Hub <i class="fas fa-chevron-down"></i> </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Budget</a></li>
+                    <li><a href="#">Expense</a></li>
+                    <li><a href="#">Goals</a></li>
+                    <li><a href="#">Report</a></li>
+                </ul>
+            </li>
+            <li><a class="" href="../AboutPage/index.html">About Us</a></li>
+            <li><a href="../LoginPage/index.html" class="btn login-btn">Login</a></li>
+            <li><a href="../SignUp_Page/index.html" class="btn signup-btn">Sign Up</a></li>
+        </ul>
+        </div>
+
+        <div class="hamburger">
+            <button class="hamburger-toggle"><i class="fas fa-bars"></i></button>
+            <ul class="hamburger-menu">
+              <li>Settings</a></li>
+              <li href="">FAQs</a></li>
+            </ul>
+          </div>
+      </header>
+
+      <section class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-categories">
+            <button class="faq-category active" data-category="general">
+                <img src="./assets/img/GeneralQ.png" alt="General Questions">
+                <p>GENERAL QUESTIONS</p>
+            </button>
+            <button class="faq-category" data-category="financial">
+                <img src="./assets/img/FinancialQ.png" alt="Financial Query">
+                <p>FINANCIAL QUERY</p>
+            </button>
+            <button class="faq-category" data-category="security">
+                <img src="./assets/img/SASQ.png" alt="Security & Privacy">
+                <p>SECURITY & PRIVACY</p>
+            </button>
+            <button class="faq-category" data-category="account">
+                <img src="./assets/img/AccountQ.png" alt="Account">
+                <p>ACCOUNT</p>
+            </button>
+        </div>
+
+        <div id="faq-list">
+            <!-- FAQ items will be injected here by JavaScript -->
+        </div>
+    </section>
+    
+    <section class="contact-section">
+        <p id="status"></p>
+        <h2>More Questions? Contact Us...</h2>
+        <form id="contact-form">
+            <div class="contact-left">
+                <textarea id="message" placeholder="Your Question" required></textarea>
+                <button type="submit">SEND MESSAGE</button>
+            </div>
+            <div class="contact-right">
+                <input type="text" id="name" placeholder="Name" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="text" id="subject" placeholder="any concerns?">
+            </div>
+        </form>
+    </section>
+    
+    <!-- Include EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Left Section -->
+            <div class="footer-left">
+                <div class="logo-footer">
+                    <img src="./assets/img/ThumbnailV2.png" alt="footer logo">
+                </div>
+                <p class="footer-text">
+                    Manage your money effortlessly, build better savings habits, and achieve financial stability.
+                </p>
+                <div class="social-icons">
+                    <a href="https://x.com/i/flow/login"><img src="./assets/img/X.png" alt="Twitter"></a>
+                    <a href="https://www.facebook.com/"><img src="./assets/img/Facebook.png" alt="Facebook"></a>
+                    <a href="mailto:@fit.edu.ph"><img src="./assets/img/Email.png" alt="Email"></a>
+                </div>
+            </div>
+    
+            <!-- Right Section -->
+            <div class="footer-right">
+                <h3>Get in Touch</h3>
+                <ul>
+                    <li><a href="https://maps.app.goo.gl/2Uth19PTfFH54h5Z8"><img src="./assets/img/Pin.png" alt="Location"> </a>
+                        <a href="https://maps.app.goo.gl/2Uth19PTfFH54h5Z8" style="color: inherit; text-decoration: none;">Sampaloc, Manila</a>
+                    </li>
+                    <li><a href="tel:+0227336689"><img src="./assets/img/Call.png" alt="Phone"> </a>
+                        <a href="tel:+0227336689" style="color: inherit; text-decoration: none;">0227336689</a>
+                    </li>
+                    <li><a href="mailto:@fit.edu.ph"><img src="./assets/img/Email.png" alt="Email"> </a>
+                        <a href="mailto:@fit.edu.ph" style="color: inherit; text-decoration: none;">@fit.edu.ph</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <span>@2025 MonStra. All Rights Reserved</span>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
