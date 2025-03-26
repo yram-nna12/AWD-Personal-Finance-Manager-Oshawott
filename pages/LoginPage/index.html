@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./assets/css/style.phone.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.8.3/axios.min.js"></script>
 
 </head>
 <body>
@@ -21,16 +22,6 @@
         <div class="header-nav">
         <ul>
             <li><a  href="../../index.html">Home</a></li>
-            <li><a href="#">Dashboard</a></li>
-            <li class="dropdown">
-                <a href="#">Finance Hub <i class="fas fa-chevron-down"></i> </a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Budget</a></li>
-                    <li><a href="#">Expense</a></li>
-                    <li><a href="#">Goals</a></li>
-                    <li><a href="#">Report</a></li>
-                </ul>
-            </li>
             <li><a href="../AboutPage/index.html">About Us</a></li>
             <li><a class="active" href="../LoginPage/index.html" class="btn login-btn">Login</a></li>
             <li><a href="../SignUp_Page/index.html" class="btn signup-btn">Sign Up</a></li>
@@ -50,14 +41,16 @@
 <section class="login-container">
         <div class="login-box">
             <h1 class="welcome">Welcome</h1>
-            <form class="login-form">
-                <label class="login-label" for="email">Email</label>
-                <input class="login-input" type="email" id="email" name="email" required>
+            <form class="login-form" id="login">
+                <label class="login-label" for="email" >Email</label>
+                <input class="login-input" type="email" id="email" name="" required>
                 
                 <label class="login-label" for="password">Password</label>
                 <input class="login-input" type="password" id="password" name="password" required>
                 
                 <button class="login-button" type="submit">Login</button>
+
+
             </form>
             <p class="login-text">Didn't have an account yet? <a class="login-link" href="../SignUp_Page/index.html">Sign Up</a></p>
         </div>
@@ -106,5 +99,8 @@
         </div>
     </div>
 </footer>
+
+<script src="./assets/js/login.js"></script>
+<script src="./assets/js/script.js"></script>
 </body>
 </html>
