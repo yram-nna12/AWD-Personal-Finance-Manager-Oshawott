@@ -11,35 +11,30 @@
 <body>
     <header class="navigation-bar">
         <div class="logo">
-          <img src="./assets/img/Thumbnail.png" alt="" class="logo-img" />
+          <img src="./assets/img/MonSta Logo Name.png" alt="" class="logo-img" />
         </div>
 
         <div class="header-nav">
-        <ul>
-            <li><a class="" href="../../index.html">Home</a></li>
-            <li><a href="#">Dashboard</a></li>
-            <li class="dropdown">
-                <a href="#">Finance Hub <i class="fas fa-chevron-down"></i> </a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Budget</a></li>
-                    <li><a href="#">Expense</a></li>
-                    <li><a href="#">Goals</a></li>
-                    <li><a href="#">Report</a></li>
-                </ul>
-            </li>
-            <li><a class="" href="../AboutPage/index.html">About Us</a></li>
-            <li><a href="../LoginPage/index.html" class="btn login-btn">Login</a></li>
-            <li><a href="../SignUp_Page/index.html" class="btn signup-btn">Sign Up</a></li>
+        <ul class="navcontent">
+            <li><a class="active" href="/index.html">Home</a></li>
+            <li><a class="aboutUs" href="./pages/AboutPage/index.html">About Us</a></li>
+            <li><a href="./pages/LoginPage/index.html" class="btn login-btn">Login</a></li>
+            <li><a href="./pages/SignUp_Page/index.html" class="btn signup-btn">Sign Up</a></li>
         </ul>
         </div>
 
+        
+        <a href="profile.html">
+            <img src="image.png" alt="User Icon" class="user-icon">
+        </a>
+        
         <div class="hamburger">
             <button class="hamburger-toggle"><i class="fas fa-bars"></i></button>
             <ul class="hamburger-menu">
-              <li>Settings</a></li>
-              <li href="">FAQs</a></li>
+                <li><a href="./pages/FAQs/index.html">FAQs</a></li>
+                <li class="settings-menu" style="display: none;"><a href="#">Settings</a></li>
             </ul>
-          </div>
+        </div>
       </header>
 
       <section class="faq-section">
@@ -132,5 +127,6 @@
     </footer>
     
     <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/nav.js"></script>
 </body>
 </html>
