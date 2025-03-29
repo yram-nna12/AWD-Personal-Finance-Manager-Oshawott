@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 financeHubItem.innerHTML = `
                     <a href="#">Finance Hub <i class="fas fa-chevron-down"></i></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Financial Tracker</a></li>
+                        <li><a href="../../pages/FinancialTracker/index.html">Financial Tracker</a></li>
                         <li><a href="#">Financial Goal</a></li>
                     </ul>
                 `;
