@@ -9,7 +9,6 @@ document.getElementById("signUp").addEventListener("submit", function name(event
     const firstName = document.getElementById("firstName").value;
     const lastName = document.getElementById("lastName").value;
     const email = document.getElementById("email").value;
-    const sex = document.getElementById("sex").value;
     const password = document.getElementById("password").value;
     const confirmationPassword = document.getElementById("confirmationPassword").value;
 
