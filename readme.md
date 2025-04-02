@@ -4,32 +4,26 @@
 
 <br />
 <div align="center">
-  <a href="https://github.com/zyx-0314/">
-  <!-- TODO: If you want to add logo or banner you can add it here -->
-    <img src="./assets/img/nyebe_white.png" alt="Nyebe" width="130" height="100">
+  <a href="https://github.com/yram-nna12/">
+    <img src="./assets/img/MonStra Logo.png" alt="MonStra" width="130" height="100">
   </a>
-<!-- TODO: Change Title to the name of the title of your Project -->
-  <h3 align="center">Title</h3>
+  <h3 align="center">Personal Finance Manager System</h3>
 </div>
-<!-- TODO: Make a short description -->
 <div align="center">
-  Short Description. (Optional)
+ Our system is a comprehensive financial management tool made to make goal-setting, tracking expenses, and creating a budget easier.  It gives consumers easy-to-use tools to track expenditures, examine financial patterns, and maximize savings with automated reports and real-time insights.  With our system's safe data processing and smooth connection, both people and organizations can easily and confidently take charge of their money.
 </div>
 
 <br />
 
-<!-- TODO: Change the zyx-0314 into your github username  -->
-<!-- TODO: Change the WD-Template-Project into the same name of your folder -->
-![](https://visit-counter.vercel.app/counter.png?page=zyx-0314/WD-Template-Project)
+![](https://visit-counter.vercel.app/counter.png?page=yram-nna12/AWD-Personal-Finance-Manager-Oshawott)
 
-[![wakatime](https://wakatime.com/badge/user/018dd99a-4985-4f98-8216-6ca6fe2ce0f8/project/63501637-9a31-42f0-960d-4d0ab47977f8.svg)](https://wakatime.com/badge/user/018dd99a-4985-4f98-8216-6ca6fe2ce0f8/project/63501637-9a31-42f0-960d-4d0ab47977f8)
+[![wakatime](https://wakatime.com/badge/user/018f02f8-3e41-49f0-93c6-1b840df169b8/project/d13c38f8-41ad-482c-a379-6c5856589787.svg)](https://wakatime.com/badge/user/018f02f8-3e41-49f0-93c6-1b840df169b8/project/d13c38f8-41ad-482c-a379-6c5856589787)
 
 ---
 
 <br />
 <br />
 
-<!-- TODO: If you want to add more layers for your readme -->
 <details>
   <summary>Table of Contents</summary>
   <ol>
@@ -43,9 +37,9 @@
           <a href="#technology">Technology</a>
         </li>
       </ol>
-    </li>
     <li>
-      <a href="#rule,-practices-and-principles">Rules, Practices and Principles</a>
+        <a href="#instruction">Instruction</a>
+    </li>
     </li>
     <li>
       <a href="#resources">Resources</a>
@@ -57,66 +51,32 @@
 
 ## Overview
 
-<!-- TODO: To be changed -->
-<!-- The following are just sample -->
-Description of the project in details.
+Our system is a platform for managing personal finances that makes it easy for users to keep track of spending, create budgets, and reach their financial objectives.  It offers real-time information, automatic reports, and astute suggestions to guarantee efficient money management through an easy-to-use and safe interface.
 
-Guiding Question:
-- What is the project
-- Whats the purpose
-- What are key components
-- What technology used and how it is used
+The system's customized budgeting tools, which assist users in setting spending caps according to their income and costs, are among its key features.  With the cost tracking function, customers may categorize expenses for improved financial awareness and either manually report transactions or automatically track them by syncing with bank accounts.  Along with receiving automatic savings recommendations, users may also establish both short- and long-term financial objectives and monitor their progress using visual indicators.  Users may also optimize budgets, examine spending patterns, and make data-driven financial decisions using the system's comprehensive financial reports and interactive graphics.  Smart advice and real-time notifications help consumers remain on course and make necessary budget adjustments.  Our solution, which is easy to use and secure, guarantees a smooth financial management experience that fosters self-assurance and financial stability.
 
 ### Key Components
-<!-- TODO: List of Key Components -->
-<!-- The following are just sample -->
-- MultiPage Website/Single Page Website
-- Parallax transition
-- Transactional
+- MultiPage Website
+- Responsive Website
+- Intuitive Navigation
+- Interactive Elements
+- Content Flexibility
+- Typography
+
 
 ### Technology
-<!-- TODO: List of Technology Used -->
 ![HTML](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white)
 
-## Rules, Practices and Principles
-1. Always use `WD-` in the front of the Title of the Project for the Subject followed by your custom naming.
-2. Do not rename any .html files; always use `index.html` as the filename.
-3. Place Files in their respective folders.
-4. All file naming are in camel case.
-   - Camel case is naming format where there is no white space in separation of each words, the first word is in all lower case while the succeding words first letter are in upper followed by lower cased letters.
-   - ex.: buttonAnimatedStyle.css
-5. Use only `External CSS`.
-6. Renaming of Pages folder names are a must, and relates to what it is doing or data it holding.
-7. File Structure to follow below.
+## Instruction
 
-```
-WD-ProjectName
-└─ assets
-|   └─ css
-|   |   └─ style.css
-|   └─ img
-|   |   └─ fileWith.jpeg/.jpg/.webp/.png
-|   └─ js
-|       └─ script.js
-└─ pages
-|  └─ pageName
-|     └─ assets
-|     |  └─ css
-|     |  |  └─ style.css
-|     |  └─ img
-|     |  |  └─ fileWith.jpeg/.jpg/.webp/.png
-|     |  └─ js
-|     |     └─ script.js
-|     └─ index.html
-└─ index.html
-└─ readme.md
-```
 
 ## Resources
 
-<!-- TODO: Add References -->
 | Title | Purpose | Link |
 |-|-|-|
-| Sample Title | Sample purpose would be here like this and this is the example of what it is. | trykolang.com |
+| Figma | Layout Designs and Placement | [LINK](https://www.figma.com/) |
+| Google Fonts | Fonts for website | [LINK](https://fonts.google.com/) |
+| Font Awesome | Icons for website | [LINK](https://fontawesome.com/icons/cloudflare) |
+| Canva | Background Picture/Edit for HD Quality | [LINK](https://www.canva.com/) |
