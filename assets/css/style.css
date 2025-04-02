@@ -241,3 +241,143 @@
     .logo {
       height: 80px;
     }
+
+
+    
+/* Footer Styles */
+.footer {
+  background-color: #1B3F1F; 
+  color: white;
+  padding: 50px 15px;
+  font-family: 'Poppins';
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+/* Left Section */
+.footer-left {
+  max-width: 500px;
+}
+
+.logo-footer img {
+  height: 70px;
+  width: auto;
+}
+
+.footer-text {
+  font-size: 14px;
+  font-family: 'poppins';
+  color: #ddd;
+  margin-top: 10px;
+}
+
+.social-icons {
+  margin-top: 15px;
+  display: flex;
+  gap: 12px;
+}
+
+.social-icons a img {
+  width: 35px;
+  height: 35px;
+}
+
+.social-icons a img,
+.footer-right ul li a img {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Scale effect with a slight brightness adjustment */
+.social-icons a:hover img,
+.footer-right ul li a:hover img {
+  transform: scale(1.1); /* Slightly enlarges the icon */
+  filter: brightness(1.3); /* Increases brightness to highlight */
+}
+
+
+/* Right Section */
+.footer-right {
+  text-align: left;
+}
+
+.footer-right h3 {
+  color: #279B48;
+  font-size: 18px;
+  margin-bottom: 12px;
+  padding-left: 10px;
+}
+
+.footer-right ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-right ul li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #ddd;
+  margin-bottom: 8px;
+}
+
+.footer-right ul img {
+  width: 35px;
+  height: 35px;
+}
+
+
+.footer-bottom {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #ccc;
+  padding: 20px 40px; 
+  padding-top: 10px;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #ccc;
+  max-width: 90%; 
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-bottom::before,
+.footer-bottom::after {
+  content: "";
+  position: absolute;
+  top: -4px;
+  width: 6px;
+  height: 6px;
+  background-color: #ccc;
+  border-radius: 50%;
+}
+
+.footer-bottom::before {
+  left: 0;
+}
+
+.footer-bottom::after {
+  right: 0;
+}
+
+
+.footer-links a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
