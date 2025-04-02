@@ -1,0 +1,243 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins';
+    overflow-x: hidden;
+    
+  }
+  
+  
+  /* NAVIGATION BAR */
+  .navigation-bar {
+    background: white;
+    height: 74px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: fixed;
+    z-index: 9999;
+  }
+  
+  .navigation-bar .logo {
+    display: flex;
+    align-items: center;
+  
+  }
+  
+  .navigation-bar .logo-img {
+    width: 110px;
+    height: auto;
+    margin-left: 5rem;
+  }
+  
+  
+  .navcontent {
+    display: flex;
+    align-items: center;
+    margin-left: 35rem;
+  }
+  
+  .dropdown-menu ul {
+    display: flex;
+  }
+  
+  /* NAVIGATION ITEMS */
+  .navigation-bar ul li {
+    list-style: none;
+    margin-left: 20px;
+  }
+  
+  /* DEFAULT NAVIGATION LINKS */
+  .navigation-bar ul li a {
+    position: relative;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+  }
+  
+  .navigation-bar .active{
+    color: #638B35;
+  }
+  
+  .navigation-bar ul li a:hover {
+  
+    color: #638B35;
+  
+  }
+  
+  /* ACTIVE LINK (Home) - Underline */
+  .navigation-bar ul li a.active::after,
+  .navigation-bar li a:hover::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #638B35;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+  }
+  
+  
+  
+  /* Disable Underline for Buttons */
+  .navigation-bar ul li a.login-btn::after,
+  .navigation-bar ul li a.signup-btn::after {
+    display: none !important;
+  }
+  
+  
+  /* --- FINANCE HUB DROPDOWN --- */
+  /* --- FINANCE HUB DROPDOWN FIX --- */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Ensure dropdown stays hidden by default */
+  .dropdown-menu {
+    visibility: hidden;  /* Instead of display: none */
+    opacity: 0;  /* Make it fully transparent */
+    position: absolute;
+    background-color: white;
+    min-width: 180px;
+    top: 100%;
+    left: 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 1000;
+    padding: 10px 0;
+    
+  }
+  
+  /* Show dropdown only on hover */
+  .dropdown:hover .dropdown-menu {
+    visibility: visible;  /* Now it's visible */
+    opacity: 1; 
+  }
+  
+  /* Dropdown Items */
+  .dropdown-menu li {
+    list-style: none;
+  }
+  
+  .dropdown-menu li a {
+    color: black;
+    padding: 10px 15px;
+    display: block;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  /* Hover Effects */
+  .dropdown-menu li a:hover {
+    background-color: #f0f0f0;
+    color: #638B35;
+  }
+  
+  
+  /* SHOW DROPDOWN ON HOVER */
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+  /* --- BUTTON STYLING --- */
+  .btn {
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  
+  /* LOGIN BUTTON */
+  .login-btn {
+    background: #638B35;
+    color: white;
+    border: none;
+  }
+  
+  a.btn.login-btn{
+    color: white;
+  }
+  
+  .login-btn:hover {
+    background: white;
+    color: #638B35;
+    border: 2px solid #638B35;
+  }
+  
+  /* SIGNUP BUTTON */
+  .signup-btn {
+    background: white;
+    color: #638B35;
+    border: 2px solid #638B35;
+  }
+  
+  .signup-btn:hover {
+    background: #d8ded2;
+    color: white;
+    border: none;
+  }
+  
+  
+  
+  
+  .navigation-bar .hamburger {
+    position: relative;
+    color: #0C3A1C;
+    margin-left: -70dvh;
+  }
+  
+  .navigation-bar .hamburger-toggle {
+    font-size: 18px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .navigation-bar .hamburger-toggle:hover {
+    color: #348751;
+  }
+  
+  .navigation-bar .hamburger-toggle i {
+    font-size: 20px;
+    margin-left: 30px;
+  }
+  
+  .navigation-bar .hamburger-menu {
+    position: absolute;
+    top: calc(100% + 5px);
+    right: -20px; 
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+  }
+  
+  .navigation-bar .hamburger:hover .hamburger-menu {
+    display: block;
+  }
+  
+  .navigation-bar .hamburger-menu li {
+    padding: 15px;
+  }
+  
+  .navigation-bar .hamburger-menu li:hover {
+    background-color: #f0f0f0;
+  }
+  
+    .logo {
+      height: 80px;
+    }
