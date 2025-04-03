@@ -228,6 +228,8 @@
   .navigation-bar .hamburger:hover .hamburger-menu {
     display: block;
   }
+
+  
   
   .navigation-bar .hamburger-menu li {
     padding: 15px;
