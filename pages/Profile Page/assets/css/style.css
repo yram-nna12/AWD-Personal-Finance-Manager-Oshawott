@@ -262,15 +262,15 @@ body {
         z-index: 10; /* Ensure it stays above other elements */
     }
   
-      .logout-btn {
-        width: 35px; /* Adjust size as needed */
-        height: 35px;
-        
-        position: absolute; /* Adjust position */
-        right: 80px; /* Move it away from the edge */
-        top: 50%;
-        transform: translateY(-35%); /* Center it vertically */
-        
+      .logout-icon {
+        display: none; 
+        cursor: pointer; 
+        width: 25px; 
+        height: 25px; 
+        position: absolute; 
+        right: 85px; 
+        top: 33%;
+        transform: translateY(-2%); /* Center it vertically */
         z-index: 10; /* Ensure it stays above other elements */
         }
 
@@ -350,6 +350,7 @@ textarea {
     height: 150px;
     padding: 5px;
     resize: none;
+    font-family: 'Poppins', sans-serif;
 }
 .modal-buttons {
     margin-top: 10px;

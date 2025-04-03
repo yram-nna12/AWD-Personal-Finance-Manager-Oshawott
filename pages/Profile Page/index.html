@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/style.laptop.css">
-    <link rel="stylesheet" href="./assets/css/style.phone.css">
     <link rel="stylesheet" href="./assets/css/style.tablet.css">
+    <link rel="stylesheet" href="./assets/css/style.phone.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -35,7 +35,7 @@
             <img src="image.png" alt="User Icon" class="user-icon-active" style="display: none;">
         </a>
     
-        <img src="../../assets/img/logoutbtn.png" alt="Logout" class="logout-icon" style="display: none; cursor: pointer; width: 25px; height: 25px; position: absolute; right: 85px; top: 33%;">
+        <img src="../../assets/img/logoutbtn.png" alt="Logout" class="logout-icon">
     
         <div class="hamburger">
             <button class="hamburger-toggle"><i class="fas fa-bars"></i></button>
@@ -59,7 +59,7 @@
  <!-- Modal for Editing Bio -->
 <div id="bioModal" class="modal">
     <div class="modal-content">
-        <h2>Edit Bio</h2>
+        <h2 class="headerEditB">Edit Bio</h2>
         <textarea id="bioInput" placeholder="Enter your bio here..."></textarea>
         <div class="modal-buttons">
             <button onclick="saveBio()">Save</button>
