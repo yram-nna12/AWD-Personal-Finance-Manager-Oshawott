@@ -1,0 +1,256 @@
+@media (max-width: 1440px){
+    /* NAVIGATION BAR */
+    .navigation-bar {
+        background: white;
+        height: 80px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0 30px;
+        position: fixed;
+        z-index: 9999;
+      }
+    
+      .navigation-bar .logo {
+        display: flex;
+        align-items: center;
+      }
+
+      .header-nav {
+        margin-left: -8rem;
+      }
+      
+      .navigation-bar .logo-img {
+        width: 110px;
+        height: auto;
+        margin-left: 3rem;
+      }
+      
+      .navigation-bar ul {
+        display: flex;
+        align-items: center;
+        
+    }
+
+    .navigation-bar ul.active {
+        display: flex;
+    }
+    
+    /* NAVIGATION ITEMS */
+    .navigation-bar ul li {
+        list-style: none;
+        margin: 0px 7px;
+        text-align: center;
+    }
+    
+    /* DEFAULT NAVIGATION LINKS */
+    .navigation-bar ul li a {
+        position: relative;
+        padding: 0px 13px;
+        text-decoration: none;
+        color: black;
+        font-size: 12px;
+    }
+    
+    .navigation-bar .active{
+        color: #638B35;
+    }
+    
+    .navigation-bar ul li a:hover {
+        color: #638B35;
+    
+    }
+    
+    /* ACTIVE LINK (Home) - Underline */
+    .navigation-bar ul li a.active::after,
+    .navigation-bar li a:hover::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 2.5px;
+        background-color: #638B35;
+        position: absolute;
+        bottom: -7px;
+        left: 0;
+    }
+    
+    
+    
+    /* Disable Underline for Buttons */
+    .navigation-bar ul li a.login-btn::after,
+    .navigation-bar ul li a.signup-btn::after {
+        display: none !important;
+    }
+    
+    
+    /* --- FINANCE HUB DROPDOWN --- */
+    /* --- FINANCE HUB DROPDOWN FIX --- */
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+    
+    /* Ensure dropdown stays hidden by default */
+    .dropdown-menu {
+        visibility: hidden;  
+        opacity: 0; 
+        position: absolute;
+        background-color: white;
+        min-width: 100%;
+        top: 100%;
+        left: 0;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        z-index: 1000;
+        padding: 10px 0px;
+        
+    }
+
+    .dropdown-menu li a:hover::after {
+      width: 100%;
+      height: 1.5px;
+  }
+    /* Show dropdown only on hover */
+    .dropdown:hover .dropdown-menu {
+        visibility: visible;  /* Now it's visible */
+        opacity: 1; 
+    }
+    
+    /* Dropdown Items */
+    .dropdown-menu li {
+        list-style: none;
+        padding: 6px;
+    }
+    
+    /* Hover Effects */
+    .dropdown-menu li a:hover {
+        background-color: #f0f0f0;
+        color: #638B35;
+    }
+    
+    
+    /* SHOW DROPDOWN ON HOVER */
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+    
+    /* --- BUTTON STYLING --- */
+    .btn {
+        border-radius: 3px;
+        font-weight: 700;
+    }
+    
+    
+    /* LOGIN BUTTON */
+    .login-btn {
+        background: #638B35;
+        color: white;
+        border: none;
+    }
+    
+
+    a.btn.login-btn{
+        color: white;
+        padding: 5px 11px;
+    }
+    
+    .login-btn:hover {
+        background: white;
+        color: #638B35;
+        border: 2px solid #638B35;
+        padding: 4px 9px;
+    }
+    
+    /* SIGNUP BUTTON */
+    .signup-btn {
+        background: white;
+        color: #638B35;
+        border: 2px solid #638B35;
+    }
+    
+    .signup-btn:hover {
+        background: #d8ded2;
+        color: white;
+        border: none;
+        padding: 3.5px 7px;
+    }
+    
+    a.btn.signup-btn{
+      padding: 3.5px 9px;
+  }
+    
+    
+    
+      .navigation-bar .hamburger {
+        position: relative;
+        color: #0C3A1C;
+        margin-left: -80dvh;
+        display: block;
+        font-size: 13px;
+      }
+      
+      .navigation-bar .hamburger-toggle {
+        background: none;
+        border: none;
+        cursor: pointer;
+      }
+    
+      .navigation-bar .hamburger-toggle:hover {
+        color: #348751;
+      }
+      
+      .navigation-bar .hamburger-toggle i {
+        font-size: 18px;
+      }
+      
+      .navigation-bar .hamburger-menu {
+        position: absolute;
+        top: calc(100% + 5px);
+        right: -10px; 
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: none;
+      }
+      
+      .navigation-bar .hamburger:hover .hamburger-menu {
+        display: block;
+      }
+      
+      .navigation-bar .hamburger-menu li {
+        padding: 12px;
+      }
+      
+      .navigation-bar .hamburger-menu li:hover {
+        background-color: #f0f0f0;
+      }
+
+
+      .user-icon-active{
+        width: 35px; /* Adjust size as needed */
+        height: 35px;
+        color: #638B35;
+        position: absolute; /* Adjust position */
+        right: 50px; /* Move it away from the edge */
+        top: 50%;
+        transform: translateY(-50%); /* Center it vertically */
+        
+        z-index: 10; /* Ensure it stays above other elements */
+    }
+  
+      .logout-btn {
+        width: 35px; /* Adjust size as needed */
+        height: 35px;
+        
+        position: absolute; /* Adjust position */
+        right: 80px; /* Move it away from the edge */
+        top: 50%;
+        transform: translateY(-35%); /* Center it vertically */
+        
+        z-index: 10; /* Ensure it stays above other elements */
+        }
+
+
+}
