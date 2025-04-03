@@ -41,7 +41,7 @@
   .navcontent {
     display: flex;
     align-items: center;
-    margin-left: 35rem;
+    margin-left: 37.8rem;
   }
   
   .dropdown-menu ul {
@@ -195,8 +195,6 @@
     position: relative;
     color: #0C3A1C;
     margin-left: -70dvh;
-    position: relative;
-    z-index: 10;
   }
   
   .navigation-bar .hamburger-toggle {
@@ -238,26 +236,10 @@
   .navigation-bar .hamburger-menu li:hover {
     background-color: #f0f0f0;
   }
-
-
-.hamburger:focus-within .hamburger-menu {
-  display: block;
-}
-
   
     .logo {
       height: 80px;
     }
-
-
-
-
-
-
-
-
-
-
     
 .hero {
   width: 100%;
