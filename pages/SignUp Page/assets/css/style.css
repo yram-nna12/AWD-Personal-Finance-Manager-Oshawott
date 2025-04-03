@@ -12,7 +12,6 @@
     
   }
   
-   
   
   /* NAVIGATION BAR */
   .navigation-bar {
@@ -242,7 +241,7 @@
     .logo {
       height: 80px;
     }
-  
+
   /* Hero Section Styling */
   .signup-hero {
       display: flex;
