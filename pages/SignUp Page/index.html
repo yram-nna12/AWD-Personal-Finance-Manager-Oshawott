@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+
+    <link rel="stylesheet" href="../SignUp Page/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/YOUR_FONT_AWESOME_KIT.js" crossorigin="anonymous"></script>
+    
+    <!-- TODO: 1st step add axios -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.8.3/axios.min.js"></script>
+</head>
+<body>
+    <header class="navigation-bar">
+        <div class="logo">
+          <img src="../../assets/img/MonSta Logo Name.png" alt="" class="logo-img" />
+        </div>
+
+        <div class="header-nav">
+        <ul class="navcontent">
+            <li><a class="home" href="../../index.html">Home</a></li>
+            <li><a class="aboutUs" href="../AboutPage/index.html">About Us</a></li>
+            <li><a href="../LoginPage/index.html" class="btn login-btn">Login</a></li>
+            <li><a href="../SignUp_Page/index.html" class="btn signup-btn">Sign Up</a></li>
+        </ul>
+        </div>
+
+        
+        <a href="profile.html">
+            <img src="image.png" alt="User Icon" class="user-icon">
+        </a>
+        
+        <div class="hamburger">
+            <button class="hamburger-toggle"><i class="fas fa-bars"></i></button>
+            <ul class="hamburger-menu">
+                <li><a href="../FAQs/index.html">FAQs</a></li>
+                <li class="settings-menu" style="display: none;"><a href="#">Settings</a></li>
+            </ul>
+        </div>
+      </header>
+
+      <section class="signup-hero">
+        <div class="signup-container">
+            <div class="signup-box">
+                <h3>START FOR FREE</h3>
+                <h1>Create an Account</h1>
+                <p>Have an account? <a href="../LoginPage/index.html">Login</a></p>
+    
+                <!-- TODO: 5th add id -->
+                <form id="signUp">
+                    <div class="input-group">
+                        <input type="text" placeholder="First Name" id="firstName">
+                        <input type="text" placeholder="Last Name" id="lastName">
+                    </div>
+                
+                    <div class="input-group">
+                        <input type="email" placeholder="Email" id="email">
+                    </div>
+                
+                    <div class="password-wrapper">
+                        <input type="password" placeholder="Password" id="password">
+                        <span class="toggle-password"><i class="fa-solid fa-eye"></i></span>
+                    </div>
+                
+                    <div class="password-wrapper">
+                        <input type="password" placeholder="Confirm Password" id="confirmationPassword">
+                        <span class="toggle-password"><i class="fa-solid fa-eye"></i></span>
+                    </div>
+                
+                    <button class="submit-button" type="submit">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+     
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Left Section -->
+        <div class="footer-left">
+            <div class="logo-footer">
+                <img src="./assets/img/ThumbnailV2.png" alt="footer logo">
+            </div>
+            <p class="footer-text">
+                Manage your money effortlessly, build better savings habits, and achieve financial stability.
+            </p>
+            <div class="social-icons">
+                <a href="https://x.com/i/flow/login"><img src="./assets/img/X.png" alt="Twitter"></a>
+                <a href="https://www.facebook.com/"><img src="./assets/img/Facebook.png" alt="Facebook"></a>
+                <a href="mailto:@fit.edu.ph"><img src="./assets/img/Email.png" alt="Email"></a>
+            </div>
+        </div>
+
+        <!-- Right Section -->
+        <div class="footer-right">
+            <h3>Get in Touch</h3>
+            <ul>
+                <li><a href="https://maps.app.goo.gl/2Uth19PTfFH54h5Z8"><img src="./assets/img/Pin.png" alt="Location"> </a>
+                    <a href="https://maps.app.goo.gl/2Uth19PTfFH54h5Z8" style="color: inherit; text-decoration: none;">Sampaloc, Manila</a>
+                </li>
+                <li><a href="tel:+0227336689"><img src="./assets/img/Call.png" alt="Phone"> </a>
+                    <a href="tel:+0227336689" style="color: inherit; text-decoration: none;">0227336689</a>
+                </li>
+                <li><a href="mailto:@fit.edu.ph"><img src="./assets/img/Email.png" alt="Email"> </a>
+                    <a href="mailto:@fit.edu.ph" style="color: inherit; text-decoration: none;">@fit.edu.ph</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <span>@2025 MonStra. All Rights Reserved</span>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+        </div>
+    </div>
+</footer>
+
+<!-- TODO: 2nd connect js -->
+<script src="./assets/js/signup.js"></script>
+<script src="./assets/js/script.js"></script>
+</body>
+</html>
