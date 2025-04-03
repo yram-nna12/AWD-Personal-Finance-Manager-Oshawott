@@ -23,7 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
         if (userIcon) {
             userIcon.style.display = "block";
             userIcon.src = user.profileImage || "../../assets/img/Profile Icon.png";
-            userIcon.style.filter = "brightness(0) saturate(100%) invert(37%) sepia(54%) saturate(533%) hue-rotate(58deg) brightness(92%) contrast(92%)";
 
             userIcon.addEventListener("mouseenter", () => {
                 userIcon.style.filter = "brightness(0) saturate(100%) invert(37%) sepia(54%) saturate(533%) hue-rotate(58deg) brightness(92%) contrast(92%)";
