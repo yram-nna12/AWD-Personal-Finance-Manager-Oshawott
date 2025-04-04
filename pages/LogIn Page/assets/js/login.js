@@ -23,7 +23,7 @@ document.getElementById("login").addEventListener("submit", function name(event)
             localStorage.setItem("user", JSON.stringify(users)); // Store full user object
 
 
-            window.location.replace("/pages/User Home Page/index.html");
+            window.location.replace("/pages/User%20Home%20Page/index.html");
         } else {
             alert("Password does not match");
         }
