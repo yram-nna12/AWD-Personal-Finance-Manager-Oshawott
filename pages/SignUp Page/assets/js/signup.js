@@ -25,7 +25,7 @@ document.getElementById("signUp").addEventListener("submit", function(event) {
         console.log(response);
         alert("User added successfully!");
         document.getElementById("signUp").reset();  // Reset the form
-        window.location.replace("/pages/LogIn Page/index.html");  // Redirect
+        window.location.replace("/AWD-Personal-Finance-Manager-Oshawott/pages/LogIn%20Page/index.html");  // Redirect
     })
     .catch(error => {
         alert("Error adding user, please check console for more information");
