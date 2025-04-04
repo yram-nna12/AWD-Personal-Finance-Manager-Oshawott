@@ -1,0 +1,623 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins';
+    overflow-x: hidden;
+    background-color: #0F3714;
+    align-items: center;
+    margin: 0; 
+  }
+  
+
+/* NAVIGATION BAR */
+.navigation-bar {
+    background: white;
+    height: 74px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: fixed;
+    z-index: 9999;
+  }
+  
+  .navigation-bar .logo {
+    display: flex;
+    align-items: center;
+  
+  }
+  
+  .navigation-bar .logo-img {
+    width: 110px;
+    height: auto;
+    margin-left: 5rem;
+  }
+  
+  
+  .navcontent {
+    display: flex;
+    align-items: center;
+    margin-left: 35rem;
+  }
+  
+  .dropdown-menu ul {
+    display: flex;
+  }
+  
+  /* NAVIGATION ITEMS */
+  .navigation-bar ul li {
+    list-style: none;
+    margin-left: 20px;
+  }
+  
+  /* DEFAULT NAVIGATION LINKS */
+  .navigation-bar ul li a {
+    position: relative;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+  }
+  
+  .navigation-bar .active{
+    color: #638B35;
+  }
+  
+  .navigation-bar ul li a:hover {
+  
+    color: #638B35;
+  
+  }
+  
+  /* ACTIVE LINK (Home) - Underline */
+  .navigation-bar ul li a.active::after,
+  .navigation-bar li a:hover::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #638B35;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+  }
+  
+  
+  
+  /* Disable Underline for Buttons */
+  .navigation-bar ul li a.login-btn::after,
+  .navigation-bar ul li a.signup-btn::after {
+    display: none !important;
+  }
+  
+  
+  /* --- FINANCE HUB DROPDOWN --- */
+  /* --- FINANCE HUB DROPDOWN FIX --- */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Ensure dropdown stays hidden by default */
+  .dropdown-menu {
+    visibility: hidden;  /* Instead of display: none */
+    opacity: 0;  /* Make it fully transparent */
+    position: absolute;
+    background-color: white;
+    min-width: 180px;
+    top: 100%;
+    left: 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 1000;
+    padding: 10px 0;
+    
+  }
+  
+  /* Show dropdown only on hover */
+  .dropdown:hover .dropdown-menu {
+    visibility: visible;  /* Now it's visible */
+    opacity: 1; 
+  }
+  
+  /* Dropdown Items */
+  .dropdown-menu li {
+    list-style: none;
+  }
+  
+  .dropdown-menu li a {
+    color: black;
+    padding: 10px 15px;
+    display: block;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  /* Hover Effects */
+  .dropdown-menu li a:hover {
+    background-color: #f0f0f0;
+    color: #638B35;
+  }
+  
+  
+  /* SHOW DROPDOWN ON HOVER */
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+  /* --- BUTTON STYLING --- */
+  .btn {
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  
+  /* LOGIN BUTTON */
+  .login-btn {
+    background: #638B35;
+    color: white;
+    border: none;
+  }
+  
+  a.btn.login-btn{
+    color: white;
+  }
+  
+  .login-btn:hover {
+    background: white;
+    color: #638B35;
+    border: 2px solid #638B35;
+  }
+  
+  /* SIGNUP BUTTON */
+  .signup-btn {
+    background: white;
+    color: #638B35;
+    border: 2px solid #638B35;
+  }
+  
+  .signup-btn:hover {
+    background: #d8ded2;
+    color: white;
+    border: none;
+  }
+  
+  
+  
+  
+  .navigation-bar .hamburger {
+    position: relative;
+    color: #0C3A1C;
+    margin-left: -70dvh;
+  }
+  
+  .navigation-bar .hamburger-toggle {
+    font-size: 18px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .navigation-bar .hamburger-toggle:hover {
+    color: #348751;
+  }
+  
+  .navigation-bar .hamburger-toggle i {
+    font-size: 20px;
+    margin-left: 30px;
+  }
+  
+  .navigation-bar .hamburger-menu {
+    position: absolute;
+    top: calc(100% + 5px);
+    right: -20px; 
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+  }
+  
+  .navigation-bar .hamburger:hover .hamburger-menu {
+    display: block;
+  }
+
+  .navigation-bar .hamburger:focus-within .hamburger-menu {
+    display: block;
+}
+  
+  .navigation-bar .hamburger-menu li {
+    padding: 15px;
+  }
+  
+  .navigation-bar .hamburger-menu li:hover {
+    background-color: #f0f0f0;
+  }
+  
+    .logo {
+      height: 80px;
+    }
+  
+    .user-icon-active{
+        width: 35px; /* Adjust size as needed */
+        height: 35px;
+        color: #638B35;
+        position: absolute; /* Adjust position */
+        right: 50px; /* Move it away from the edge */
+        top: 50%;
+        transform: translateY(-50%); /* Center it vertically */
+        
+        z-index: 10; /* Ensure it stays above other elements */
+    }
+  
+      .logout-icon {
+        display: none; 
+        cursor: pointer; 
+        width: 25px; 
+        height: 25px; 
+        position: absolute; 
+        right: 85px; 
+        top: 33%;
+        transform: translateY(-2%); /* Center it vertically */
+        z-index: 10; /* Ensure it stays above other elements */
+        }
+
+              
+       
+        
+       
+/* Main Section */
+.financial-goal-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Goal Heading */
+.goal-heading {
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: left;
+    margin-bottom: 10px;
+    color: #ffffff;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.goal-heading .highlight {
+    color: #638B35;
+}
+
+/* Goal Form and Table Layout */
+.financial-goal-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10rem 5%;
+    width: 100%;
+    gap: 3rem;
+}
+
+/* Goal Form Styling */
+.goal-form-container {
+    flex: 1;
+    background: #0F3714;
+    padding: 50px 3rem;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+}
+
+/* Updated Form Layout */
+#goal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Input Fields */
+.goal-input,
+.goal-textarea {
+    width: 100%;
+    padding: 12px;
+    font-family: 'Poppins';
+    background: #1b4d20;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+    outline: none;
+}
+
+.goal-input::placeholder,
+.goal-textarea::placeholder {
+    color: #0F3714;
+}
+
+/* Adjusted Layout for Inputs */
+.goal-input-group {
+    display: flex;
+    gap: 15px;
+}
+
+.goal-textarea {
+    height: 100px;
+    resize: none;
+}
+
+/* Styling for Target Amount & Deadline */
+.small-input {
+    flex: 1;
+    width: auto;
+}
+
+/* Set Goal Button */
+.goal-btn {
+    background: #638B35;
+    color:white;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    width: 8rem;
+    display: block;
+    margin-top: 2.5rem;
+    margin: 0 auto;
+}
+
+.goal-btn:hover {
+    background: #98c379;
+}
+
+
+
+
+/* Goal Table */
+.goal-table-container {
+    flex: 2;
+    background: #1B3F1F;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.goal-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.goal-table thead {
+    background: #1b4d20;
+    color: white;
+    text-align: left;
+}
+   
+.goal-table th, .goal-table td {
+    padding: 10px;
+    text-align: center;
+    color: white;
+
+}
+.goal-table th{
+  font-size: 0.9rem;
+}
+
+.goal-table td {
+  font-size: 0.8rem;
+}
+
+
+.goal-table tbody tr:nth-child(even) {
+    background: #638B35;
+}
+
+.goal-table tbody tr:nth-child(odd) {
+    background: #4F7630;
+}
+
+/* Action Icons */
+.edit-icon, .delete-icon {
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.edit-icon {
+    color: #c5e1a5;
+}
+
+.delete-icon {
+    color: #e57373;
+}
+/* Hide modal by default */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 50%;
+}
+
+.close-btn {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+
+.close-btn {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/* Footer Styles */
+
+.footer {
+    background-color: #1B3F1F; 
+    color: white;
+    padding: 50px 15px;
+    font-family: 'Poppins';
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+/* Left Section */
+.footer-left {
+    max-width: 500px;
+}
+
+.logo-footer img {
+    height: 70px;
+    width: auto;
+}
+
+.footer-text {
+    font-size: 14px;
+    font-family: 'poppins';
+    color: #ddd;
+    margin-top: 10px;
+}
+
+.social-icons {
+    margin-top: 15px;
+    display: flex;
+    gap: 12px;
+}
+
+.social-icons a img {
+    width: 35px;
+    height: 35px;
+}
+
+.social-icons a img,
+.footer-right ul li a img {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Scale effect with a slight brightness adjustment */
+.social-icons a:hover img,
+.footer-right ul li a:hover img {
+    transform: scale(1.1); /* Slightly enlarges the icon */
+    filter: brightness(1.3); /* Increases brightness to highlight */
+}
+
+
+/* Right Section */
+.footer-right {
+    text-align: left;
+}
+
+.footer-right h3 {
+    color: #279B48;
+    font-size: 18px;
+    margin-bottom: 12px;
+    padding-left: 10px;
+}
+
+.footer-right ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-right ul li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #ddd;
+    margin-bottom: 8px;
+}
+
+.footer-right ul img {
+    width: 35px;
+    height: 35px;
+}
+
+
+.footer-bottom {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #ccc;
+    padding: 20px 40px; 
+    padding-top: 10px;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #ccc;
+    max-width: 90%; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-bottom::before,
+.footer-bottom::after {
+    content: "";
+    position: absolute;
+    top: -4px;
+    width: 6px;
+    height: 6px;
+    background-color: #ccc;
+    border-radius: 50%;
+}
+
+.footer-bottom::before {
+    left: 0;
+}
+
+.footer-bottom::after {
+    right: 0;
+}
+
+
+.footer-links a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
