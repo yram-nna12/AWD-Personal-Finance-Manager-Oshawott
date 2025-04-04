@@ -3,84 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up Page</title>
-
-    <link rel="stylesheet" href="../SignUp Page/assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/style.laptop.css">
     <link rel="stylesheet" href="./assets/css/style.tablet.css">
     <link rel="stylesheet" href="./assets/css/style.phone.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/YOUR_FONT_AWESOME_KIT.js" crossorigin="anonymous"></script>
-    
-    <!-- TODO: 1st step add axios -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.8.3/axios.min.js"></script>
+    <title>Setting Page</title>
 </head>
 <body>
     <header class="navigation-bar">
         <div class="logo">
-          <img src="../../assets/img/MonSta Logo Name.png" alt="" class="logo-img" />
+            <img src="./assets/img/Thumbnail.png" alt="Logo" class="logo-img" />
         </div>
-
-        <div class="header-nav">
-        <ul class="navcontent">
-            <li><a class="home" href="../../index.html">Home</a></li>
-            <li><a class="aboutUs" href="../About-Us-Page/index.html">About Us</a></li>
-            <li><a href="../LogIn Page/index.html" class="btn login-btn">Login</a></li>
-            <li><a href="../SignUp Page/index.html" class="btn signup-btn">Sign Up</a></li>
-        </ul>
-        </div>
-
-        
-        <a href="profile.html">
-            <img src="image.png" alt="User Icon" class="user-icon">
+    
+        <nav class="header-nav">
+            <ul class="navcontent">
+             <li><a class="" href="../User Home Page/index.html">Home</a></li>
+              <li class="dropdown" style="display: none;">
+                    <a>Finance Hub <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../Financial-Tracker-Page/index.html">Financial Tracker</a></li>
+                        <li><a href="../Financial_Goals/index.html">Financial Goals</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    
+        <a href="../Profile Page/index.html">
+            <img src="image.png" alt="User Icon" class="user-icon-active" style="display: none;">
         </a>
-        
+    
+        <img src="../../assets/img/logoutbtn.png" alt="Logout" class="logout-icon">
+    
         <div class="hamburger">
             <button class="hamburger-toggle"><i class="fas fa-bars"></i></button>
             <ul class="hamburger-menu">
                 <li><a href="../FAQs/index.html">FAQs</a></li>
-                <li class="settings-menu" style="display: none;"><a href="#">Settings</a></li>
+                <li class="settings-menu" style="display: none;"><a href="../SettingPage/index.html">Settings</a></li>
             </ul>
         </div>
-      </header>
+    </header>
 
-      <section class="signup-hero">
-        <div class="signup-container">
-            <div class="signup-box">
-                <h3>START FOR FREE</h3>
-                <h1>Create an Account</h1>
-                <p>Have an account? <a href="../LogIn Page/index.html">Login</a></p>
-    
-                <!-- TODO: 5th add id -->
-                <form id="signUp">
-                    <div class="input-group">
-                        <input type="text" placeholder="First Name" id="firstName">
-                        <input type="text" placeholder="Last Name" id="lastName">
-                    </div>
+      <div class="settings-container">
+        
+        <!-- Two Column Layout -->
+        <div class="main-content">
+            
+            <!-- Left Column: Personal Information & Password -->
+            <div class="info-section">
                 
-                    <div class="input-group">
-                        <input type="email" placeholder="Email" id="email">
+                <!-- Personal Information Section -->
+                <div class="personal-info-container">
+                    <div class="header-with-buttons">
+                        <h2 class="section-title">Personal Information</h2>
+                        <div class="button-group">
+                            <button class="update-btn">Update Account</button>
+                            <button class="delete-btn">Delete Account 🗑</button>
+                        </div>
                     </div>
-                
-                    <div class="password-wrapper">
-                        <input type="password" placeholder="Password" id="password">
-                        <span class="toggle-password"><i class="fa-solid fa-eye"></i></span>
+
+                    <div class="info-row">
+                        <div class="input-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName">
+                        </div>
+
+                        <div class="input-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName">
+                        </div>
                     </div>
-                
-                    <div class="password-wrapper">
-                        <input type="password" placeholder="Confirm Password" id="confirmationPassword">
-                        <span class="toggle-password"><i class="fa-solid fa-eye"></i></span>
-                    </div>
-                
-                    <button class="submit-button" type="submit">Sign Up</button>
-                </form>
+                </div>
+
             </div>
         </div>
-    </section>
+    </div>
+
     
-     
 <footer class="footer">
     <div class="footer-container">
         <!-- Left Section -->
@@ -124,8 +124,10 @@
     </div>
 </footer>
 
-<!-- TODO: 2nd connect js -->
-<script src="./assets/js/signup.js"></script>
 <script src="./assets/js/script.js"></script>
+<script src="./assets/js/updateAcc.js"></script>
+<script src="./assets/js/delete.js"></script>
+
 </body>
 </html>
+

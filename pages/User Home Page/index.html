@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.laptop.css">
+    <link rel="stylesheet" href="./assets/css/style.tablet.css">
+    <link rel="stylesheet" href="./assets/css/style.phone.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <title>User Home Page</title>
+</head>
+<body>
+    <header class="navigation-bar">
+        <div class="logo">
+            <img src="./assets/img/Thumbnail.png" alt="Logo" class="logo-img" />
+        </div>
+    
+        <nav class="header-nav">
+            <ul class="navcontent">
+             <li><a class="active" href="../User Home Page/index.html">Home</a></li>
+              <li class="dropdown" style="display: none;">
+                    <a>Finance Hub <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../Financial-Tracker-Page/index.html">Financial Tracker</a></li>
+                        <li><a href="../Financial_Goals/index.html">Financial Goals</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    
+        <a href="../Profile Page/index.html">
+            <img src="image.png" alt="User Icon" class="user-icon-active" style="display: none;">
+        </a>
+    
+        <img src="../../assets/img/logoutbtn.png" alt="Logout" class="logout-icon">
+    
+        <div class="hamburger">
+            <button class="hamburger-toggle"><i class="fas fa-bars"></i></button>
+            <ul class="hamburger-menu">
+                <li><a href="../FAQs/index.html">FAQs</a></li>
+                <li class="settings-menu" style="display: none;"><a href="../SettingPage/index.html">Settings</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Financial Goals Hero Section --> 
+<section class="User-home-section">
+    <div class="User-home-container">
+        
+        <!-- Form Container (Including Heading) -->
+        <div class="home-form-container">
+            <h1 class="home-heading">Welcome Back! <span id="userName"></span></h1>
+            <h2 class="home-title">Your Recent Transactions</h2>
+            <div class="table-container">
+                <table>  
+                    <thead class="categories">
+                        <tr>
+                            <th>Transaction ID</th>
+                            <th>Type</th>
+                            <th>Amount</th>
+                            <th>Category/ Source</th>
+                            <th>Date</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody class="transaction-body" id="transaction-body">
+                        <tr class="placeholder-row">
+                            <td colspan="7" class="empty-placeholder">No transactions yet.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+       <!-- Right Section (Summary) -->
+       <div id="summary-container">
+        <div id="current-balance-box" class="summary-box">
+            <h3>CURRENT BALANCE</h3>
+            <p>Your Current Balance is</p>
+            <div class="balance">
+                <h2 id="balance">$0</h2>
+            </div>
+        </div>
+        <div id="income-box" class="summary-box">
+            <h3>INCOME</h3>
+            <p>Your Total Income is</p>
+            <div class="income">
+                <h2 id="total-income">$0</h2>
+            </div>
+        </div>
+        <div id="expense-box" class="summary-box">
+            <h3>EXPENSE</h3>
+            <p>Your Total Expense is</p>
+            <div class="income">
+                <h2 id="total-expense">$0</h2>
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+</section>
+
+
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Left Section -->
+            <div class="footer-left">
+                <div class="logo-footer">
+                    <img src="./assets/img/ThumbnailV2.png" alt="footer logo">
+                </div>
+                <p class="footer-text">
+                    Manage your money effortlessly, build better savings habits, and achieve financial stability.
+                </p>
+                <div class="social-icons">
+                    <a href="https://x.com/i/flow/login"><img src="./assets/img/X.png" alt="Twitter"></a>
+                    <a href="https://www.facebook.com/"><img src="./assets/img/Facebook.png" alt="Facebook"></a>
+                    <a href="mailto:monstra912@gmail.com"><img src="./assets/img/Email.png" alt="Email"></a>
+                </div>
+            </div>
+    
+            <!-- Right Section -->
+            <div class="footer-right">
+                <h3>Get in Touch</h3>
+                <ul>
+                    <li><a href="https://maps.app.goo.gl/2Uth19PTfFH54h5Z8"><img src="./assets/img/Pin.png" alt="Location"> </a>
+                        <a href="https://maps.app.goo.gl/2Uth19PTfFH54h5Z8" style="color: inherit; text-decoration: none;">Sampaloc, Manila</a>
+                    </li>
+                    <li><a href="tel:+0227336689"><img src="./assets/img/Call.png" alt="Phone"> </a>
+                        <a href="tel:+0227336689" style="color: inherit; text-decoration: none;">0227336689</a>
+                    </li>
+                    <li><a href="mailto:monstra912@gmail.com"><img src="./assets/img/Email.png" alt="Email"> </a>
+                        <a href="mailto:monstra912@gmail.com" style="color: inherit; text-decoration: none;">monstra912@gmail.com</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <span>@2025 MonStra. All Rights Reserved</span>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="./assets/js/nav.js"></script>
+    <script src="./assets/js/script.js"></script>
+
+</body>
+</html>
+
