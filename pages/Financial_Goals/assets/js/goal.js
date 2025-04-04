@@ -1,181 +1,159 @@
-document.getElementById("goal-form").addEventListener("submit", function(event) {
-    event.preventDefault();
+document.addEventListener("DOMContentLoaded", function () {
+    const goalForm = document.getElementById("goal-form");
+    const tbody = document.querySelector('.goal-table tbody');
+    const userId = localStorage.getItem("id");
 
-    const title = document.getElementById("goal-title").value;
-    const description = document.getElementById("goal-description").value;
-    const targetAmount = document.getElementById("goal-target").value;
-    const deadline = document.getElementById("goal-deadline").value; // Input value
-    const userId = localStorage.getItem("id"); // Ensure user ID is correctly fetched
-
-    // Validate inputs
-    if (!title || !description || !targetAmount || !deadline || !userId) {
-        alert("All fields are required!");
+    if (!userId) {
+        alert("User ID is missing. Please log in again.");
         return;
     }
 
-    // Format the deadline using a helper function
-    const formattedDeadline = formatDate(deadline); 
-
-    const goalData = {
-        title: title,
-        description: description,
-        targetAmount: targetAmount,
-        deadline: formattedDeadline, // Use the formatted deadline
-        userId: userId
-    };
-
-    axios.post('https://demo-api-skills.vercel.app/api/FinanceManager/goals', goalData)
-        .then(response => {
-            console.log("Goal created successfully:", response.data);
-            alert("Goal created successfully!");
-
-            // Call function to add the new goal to the table
-            addGoalToTable(response.data); // Use response data to populate the table
-        })
-        .catch(error => {
-            if (error.response) {
-                console.error("Error response data:", error.response.data);
-                alert("Error creating goal: " + error.response.data.error || "Unknown error");
-            } else {
-                console.error("Error message:", error.message);
-                alert("Error creating goal: " + error.message);
-            }
-        });
-});
-
-// Function to format date from 'YYYY-MM-DDT00:00:00.000Z' to 'YYYY-MM-DD'
-function formatDate(dateString) {
-    const date = new Date(dateString);  // Convert input date string to Date object
-    const formattedDate = date.toLocaleDateString('en-CA');  // 'en-CA' ensures 'YYYY-MM-DD' format
-    return formattedDate;
-}
-
-
-// Function to add a goal to the table
-function addGoalToTable(goal) {
-    const tbody = document.querySelector('.goal-table tbody');
-
-    const row = document.createElement('tr');
-    row.setAttribute('data-goal-id', goal.id);
-
-    const titleCell = document.createElement('td');
-    titleCell.textContent = goal.title;
-
-    const targetAmountCell = document.createElement('td');
-    targetAmountCell.textContent = goal.targetAmount;
-
-    const descriptionCell = document.createElement('td');
-    descriptionCell.textContent = goal.description;
-
-    // Convert deadline string to a Date object and format it to MM/DD/YYYY
-    const deadlineDate = new Date(goal.deadline);
-    const formattedDeadline = deadlineDate.toLocaleDateString('en-US');  // Format as MM/DD/YYYY
-
-    const deadlineCell = document.createElement('td');
-    deadlineCell.textContent = formattedDeadline;
-
-    const actionsCell = document.createElement('td');
-    actionsCell.innerHTML = `
-        <button class="delete-btn">Delete</button>
-        <button class="update-btn">Update</button>
-    `;
-
-    row.appendChild(titleCell);
-    row.appendChild(targetAmountCell);
-    row.appendChild(descriptionCell);
-    row.appendChild(deadlineCell);
-    row.appendChild(actionsCell);
-
-    tbody.appendChild(row);
-}
-
-// Event listener for deleting a goal
-document.addEventListener('click', function(event) {
-    // Delete goal logic
-    if (event.target && event.target.classList.contains('delete-btn')) {
-        const goalId = event.target.closest('tr').getAttribute('data-goal-id');
-
-        if (!goalId) {
-            alert("Goal ID is missing!");
-            return;
-        }
-
-        const confirmDelete = confirm("Are you sure you want to delete this goal?");
-        if (!confirmDelete) return;
-
-        console.log("Deleting goal with ID:", goalId);
-
-        axios.delete(`https://demo-api-skills.vercel.app/api/FinanceManager/goals/${goalId}`)
+    // Fetch goals from API and store them in localStorage
+    function fetchGoalsFromAPI() {
+        axios.get(`https://demo-api-skills.vercel.app/api/FinanceManager/users/${userId}/goals`)
             .then(response => {
-                console.log("Goal deleted successfully:", response.data);
-                const rowToDelete = event.target.closest('tr');
-                rowToDelete.remove();
-                alert("Goal deleted successfully!");
+                const goals = response.data || [];
+                localStorage.setItem("goals", JSON.stringify(goals));
+                displayGoals(goals);
             })
             .catch(error => {
-                console.error("Error deleting goal:", error);
-
-                if (error.response) {
-                    alert("Error deleting goal: " + error.response.data.error || "Unknown error");
-                } else if (error.request) {
-                    alert("Error deleting goal: No response from server");
-                } else {
-                    alert("Error deleting goal: " + error.message);
-                }
+                console.error("Error fetching goals from API:", error);
             });
     }
 
-    // Update goal logic
-    if (event.target && event.target.classList.contains('update-btn')) {
-        const goalId = event.target.closest('tr').getAttribute('data-goal-id');
-        
-        if (!goalId) {
-            alert("Goal ID is missing!");
-            return;
+    // Load goals from localStorage or API
+    function loadGoals() {
+        const storedGoals = localStorage.getItem("goals");
+        if (storedGoals) {
+            displayGoals(JSON.parse(storedGoals));
+        } else {
+            fetchGoalsFromAPI();
         }
+    }
 
-        // Example logic for updating (showing form or updating directly)
-        const title = prompt("Enter new title:");
-        const description = prompt("Enter new description:");
-        const targetAmount = prompt("Enter new target amount:");
-        const deadline = prompt("Enter new deadline (YYYY-MM-DD):");
+    // Function to display goals in the table
+    function displayGoals(goals) {
+        tbody.innerHTML = "";
+        goals.forEach(addGoalToTable);
+    }
+
+    // Function to add a goal to the table
+    function addGoalToTable(goal) {
+        const row = document.createElement('tr');
+        row.setAttribute('data-goal-id', goal.id);
+
+        row.innerHTML = `
+            <td>${goal.title}</td>
+            <td>${goal.targetAmount}</td>
+            <td>${goal.description}</td>
+            <td>${new Date(goal.deadline).toLocaleDateString('en-US')}</td>
+            <td>
+                <button class="update-btn">Update</button>
+                <button class="delete-btn">Delete</button>
+            </td>
+        `;
+
+        tbody.appendChild(row);
+    }
+
+    // Handle form submission
+    goalForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const title = document.getElementById("goal-title").value;
+        const description = document.getElementById("goal-description").value;
+        const targetAmount = document.getElementById("goal-target").value;
+        const deadline = document.getElementById("goal-deadline").value;
 
         if (!title || !description || !targetAmount || !deadline) {
-            alert("All fields are required to update the goal.");
+            alert("All fields are required!");
             return;
         }
 
-        const updatedGoal = {
-            title: title,
-            description: description,
-            targetAmount: parseFloat(targetAmount),
-            deadline: deadline
+        const goalData = {
+            title,
+            description,
+            targetAmount,
+            deadline,
+            userId
         };
 
-        console.log("Updating goal with ID:", goalId);
-
-        axios.put(`https://demo-api-skills.vercel.app/api/FinanceManager/goals/${goalId}`, updatedGoal)
+        axios.post('https://demo-api-skills.vercel.app/api/FinanceManager/goals', goalData)
             .then(response => {
-                console.log("Goal updated successfully:", response.data);
-                alert("Goal updated successfully!");
-
-                // Update the goal row in the table with new values
-                const rowToUpdate = event.target.closest('tr');
-                rowToUpdate.querySelector('td:nth-child(1)').textContent = updatedGoal.title;
-                rowToUpdate.querySelector('td:nth-child(2)').textContent = updatedGoal.targetAmount;
-                rowToUpdate.querySelector('td:nth-child(3)').textContent = updatedGoal.description;
-                rowToUpdate.querySelector('td:nth-child(4)').textContent = new Date(updatedGoal.deadline).toLocaleDateString('en-US');
+                const newGoal = response.data;
+                const storedGoals = JSON.parse(localStorage.getItem("goals")) || [];
+                storedGoals.push(newGoal);
+                localStorage.setItem("goals", JSON.stringify(storedGoals));
+                addGoalToTable(newGoal);
+                alert("Goal created successfully!");
             })
             .catch(error => {
-                console.error("Error updating goal:", error);
-
-                if (error.response) {
-                    alert("Error updating goal: " + error.response.data.error || "Unknown error");
-                } else if (error.request) {
-                    alert("Error updating goal: No response from server");
-                } else {
-                    alert("Error updating goal: " + error.message);
-                }
+                console.error("Error creating goal:", error);
+                alert("Error creating goal!");
             });
-    }
+    });
+
+    // Event delegation for updating and deleting goals
+    tbody.addEventListener("click", function (event) {
+        const row = event.target.closest("tr");
+        const goalId = row.getAttribute("data-goal-id");
+
+        if (event.target.classList.contains("delete-btn")) {
+            if (!confirm("Are you sure you want to delete this goal?")) return;
+
+            axios.delete(`https://demo-api-skills.vercel.app/api/FinanceManager/goals/${goalId}`)
+                .then(() => {
+                    const storedGoals = JSON.parse(localStorage.getItem("goals")).filter(goal => goal.id !== goalId);
+                    localStorage.setItem("goals", JSON.stringify(storedGoals));
+                    row.remove();
+                    alert("Goal deleted successfully!");
+                })
+                .catch(error => {
+                    console.error("Error deleting goal:", error);
+                    alert("Error deleting goal!");
+                });
+        }
+
+        if (event.target.classList.contains("update-btn")) {
+            const updatedTitle = prompt("Enter new title:", row.cells[0].textContent);
+            const updatedTargetAmount = prompt("Enter new target amount:", row.cells[1].textContent);
+            const updatedDescription = prompt("Enter new description:", row.cells[2].textContent);
+            const updatedDeadline = prompt("Enter new deadline (YYYY-MM-DD):", row.cells[3].textContent);
+
+            if (!updatedTitle || !updatedTargetAmount || !updatedDescription || !updatedDeadline) {
+                alert("All fields are required to update the goal.");
+                return;
+            }
+
+            const updatedGoal = {
+                title: updatedTitle,
+                targetAmount: updatedTargetAmount,
+                description: updatedDescription,
+                deadline: updatedDeadline
+            };
+
+            axios.put(`https://demo-api-skills.vercel.app/api/FinanceManager/goals/${goalId}`, updatedGoal)
+                .then(() => {
+                    // Update the goal data in localStorage immediately
+                    const storedGoals = JSON.parse(localStorage.getItem("goals")).map(goal =>
+                        goal.id === goalId ? { ...goal, ...updatedGoal } : goal
+                    );
+                    localStorage.setItem("goals", JSON.stringify(storedGoals));
+
+                    // Update the goal row in the table immediately without reloading
+                    row.cells[0].textContent = updatedGoal.title;
+                    row.cells[1].textContent = updatedGoal.targetAmount;
+                    row.cells[2].textContent = updatedGoal.description;
+                    row.cells[3].textContent = new Date(updatedGoal.deadline).toLocaleDateString('en-US');
+                    
+                    alert("Goal updated successfully!");
+                })
+                .catch(error => {
+                    console.error("Error updating goal:", error);
+                    alert("Error updating goal!");
+                });
+        }
+    });
+
+    loadGoals();
 });
