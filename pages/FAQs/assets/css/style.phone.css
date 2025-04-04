@@ -42,6 +42,7 @@
         list-style: none;
         margin: 0px 1px;
         text-align: center;
+        margin-left: -5px;
     }
     
     /* DEFAULT NAVIGATION LINKS */
@@ -83,7 +84,7 @@
         display: none !important;
     }
 
-  .user-icon-active{
+  .user-icon{
     width: 26px; /* Adjust size as needed */
     height: 26px;
     color: #638B35;
@@ -95,15 +96,119 @@
 }
 
   .logout-icon {
-    width: 17px; /* Adjust size as needed */
-    height: 17px;
-    position: absolute; /* Adjust position */
-    right: 60px; /* Move it away from the edge */
-    top: 50%;
-    transform: translateY(-45%); /* Center it vertically */
-    z-index: 10; /* Ensure it stays above other elements */
+    font-size: 1px;
+    margin-right: -28px; /* Move it away from the edge */
+    transform: translateY(-20%); /* Center it vertically */
+    z-index: 80; /* Ensure it stays above other elements */
     }
     
+    /* FAQ Section */
+.faq-section {
+  text-align: center;
+  padding: 8rem 1.5rem;
+}
+
+.faq-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 2.5rem;
+  margin-top: -1.5rem;
+}
+
+/* FAQ Categories */
+.faq-categories {
+  gap: 1rem;
+}
+
+.faq-category {
+  padding: 1rem;
+  border-radius: 0.8rem;
+  width: 6.4rem;
+  height: 6.5rem;
+}
+
+.faq-category img {
+  width: 56%;
+}
+
+.faq-category p {
+  color: white;
+  font-size: 0.50rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* FAQ List */
+#faq-list {
+  max-width: 600px;
+  margin: auto;
+  text-align: left;
+}
+
+.faq-item {
+  padding: 0.65rem;
+  margin-bottom: 1rem;
+}
+
+.faq-question {
+  font-size: 0.7rem;
+  padding: 1px 22px;
+}
+
+
+.faq-question::after {
+  font-size: 0.5rem;
+}
+
+.faq-answer {
+  display: none;
+  font-size: 0.65rem;
+  padding: 10px 50px;
+  color: #000000;
+}
+
+/* Center the section */
+.contact-section {
+  margin: 8dvh 8dvh;
+}
+
+/* Styling the form */
+#contact-form {
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.contact-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 3.3rem;
+  color:#0b3f24;
+}
+/* Left Side (Textarea + Button) */
+.contact-left {
+  flex: 1;
+  flex-direction: column;
+  padding: 5dvh 3dvh;
+}
+
+textarea {
+  padding: 20px;
+  border-radius: 2px;
+}
+
+/* Right Side (Input Fields) */
+.contact-right input {
+  font-size: 10px;
+}
+
+/* Button Styling */
+.contact-section button {
+  border-radius: 10px;
+  font-size: 0.5rem;
+  cursor: pointer;
+  margin-top: 2px;
+}
+
+.contact-section button:hover {
+  background: #0b3f24;
+}
 
 
 

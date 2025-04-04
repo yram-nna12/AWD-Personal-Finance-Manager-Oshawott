@@ -1,18 +1,19 @@
 *{
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
-    list-style: none;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Poppins';
-    overflow-x: hidden;
-    
-  }
-  
-  
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column; 
+}
+
+
+
 /* NAVIGATION BAR */
 .navigation-bar {
     background: white;
@@ -37,12 +38,11 @@
     height: auto;
     margin-left: 5rem;
   }
-  
-  
+
   .navcontent {
     display: flex;
     align-items: center;
-    margin-left: 35rem;
+    margin-left: 36rem;
   }
   
   .dropdown-menu ul {
@@ -52,7 +52,7 @@
   /* NAVIGATION ITEMS */
   .navigation-bar ul li {
     list-style: none;
-    margin-left: 20px;
+    margin-left: 7px;
   }
   
   /* DEFAULT NAVIGATION LINKS */
@@ -69,7 +69,6 @@
   }
   
   .navigation-bar ul li a:hover {
-  
     color: #638B35;
   
   }
@@ -86,9 +85,8 @@
     bottom: -5px;
     left: 0;
   }
-  
-  
-  
+
+
   /* Disable Underline for Buttons */
   .navigation-bar ul li a.login-btn::after,
   .navigation-bar ul li a.signup-btn::after {
@@ -246,7 +244,7 @@
       height: 80px;
     }
   
-    .user-icon-active{
+    .user-icon{
         width: 35px; /* Adjust size as needed */
         height: 35px;
         color: #638B35;
@@ -258,7 +256,7 @@
         z-index: 10; /* Ensure it stays above other elements */
     }
   
-      .logout-icon {
+      .logout-btn {
         display: none; 
         cursor: pointer; 
         width: 25px; 
@@ -269,1489 +267,333 @@
         transform: translateY(-2%); /* Center it vertically */
         z-index: 10; /* Ensure it stays above other elements */
         }
-
-    
+  
 /* FAQ Section */
 .faq-section {
-    text-align: center;
-    padding: 10rem 0.5rem;
-    background-color: #0F3714;
+  text-align: center;
+  padding: 10rem 0.5rem;
+  background-color: #0F3714;
 }
 
 .faq-section h2 {
-    font-size: 3.5rem;
-    color: white;
-    font-weight: bold;
-    margin-bottom: 5rem;
-    font-family: 'Poppins', sans-serif;
-    text-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.3);
+  font-size: 3.5rem;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 5rem;
+  font-family: 'Poppins', sans-serif;
+  text-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.3);
 }
 
 /* FAQ Categories */
 .faq-categories {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-    margin-bottom: 4rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 4rem;
 }
 
 .faq-category {
-    background-color: #638B35;
-    padding: 1.5rem;
-    border-radius: 1rem;
-    width: 8.375rem;
-    height: 8rem;
-    text-align: center;
-    cursor: pointer;
-    transition: 0.3s;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: 0.8rem 0.8rem 0.5rem rgba(0, 0, 0, 0.3);
-    border: none;
-    overflow: hidden;
+  background-color: #638B35;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  width: 8.375rem;
+  height: 8rem;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0.8rem 0.8rem 0.5rem rgba(0, 0, 0, 0.3);
+  border: none;
+  overflow: hidden;
 }
 
 .faq-category img {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    width: 66%;
-    height: 100%;
-    object-fit: cover;
-    margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 66%;
+  height: 100%;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
 }
 
 .faq-category p {
-    color: white;
-    font-size: 0.54rem;
-    font-family: 'Poppins', sans-serif;
+  color: white;
+  font-size: 0.54rem;
+  font-family: 'Poppins', sans-serif;
 }
 
 .faq-category.active {
-    background-color: #185C29;
-    transform: translateY(-0.3125rem) scale(1.02);
+  background-color: #185C29;
+  transform: translateY(-0.3125rem) scale(1.02);
 }
 
 /* FAQ List */
 #faq-list {
-    max-width: 700px;
-    margin: auto;
-    text-align: left;
+  max-width: 700px;
+  margin: auto;
+  text-align: left;
 }
 
 .faq-item {
-    background-color: white;
-    padding: 0.8rem;
-    margin-bottom: 1.3rem;
-    border-radius: 8px;
-    box-shadow: 0.7rem 0.7rem 0.4rem rgba(0, 0, 0, 0.3);
+  background-color: white;
+  padding: 0.8rem;
+  margin-bottom: 1.3rem;
+  border-radius: 8px;
+  box-shadow: 0.7rem 0.7rem 0.4rem rgba(0, 0, 0, 0.3);
 }
 
 .faq-question {
-    background: none;
-    border: none;
-    width: 100%;
-    color: #0C3A1C;
-    font-weight: 505;
-    font-size: 0.9rem;
-    margin-left: 1rem;
-    cursor: pointer;
-    padding: 2px 25px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-family: 'Poppins', sans-serif;
+  background: none;
+  border: none;
+  width: 100%;
+  color: #0C3A1C;
+  font-weight: 505;
+  font-size: 0.9rem;
+  margin-left: 1rem;
+  cursor: pointer;
+  padding: 2px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
 }
 
 
 .faq-question::after {
-    content: "⮟";
-    font-weight: bolder;
-    font-size: 1rem;
-    font-family: 'Poppins', sans-serif;
+  content: "⮟";
+  font-weight: bolder;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
 }
 
 .faq-answer {
-    display: none;
-    font-size: smaller;
-    padding: 10px 50px;
-    color: #000000;
+  display: none;
+  font-size: smaller;
+  padding: 10px 50px;
+  color: #000000;
 }
 
 /* Center the section */
 .contact-section {
-    text-align: center;
-    margin: 17dvh auto;
-    max-width: 155dvh;
+  text-align: center;
+  margin: 17dvh auto;
+  max-width: 155dvh;
 }
 
 /* Styling the form */
 #contact-form {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 20px;
 }
 
 .contact-section h2 {
-    font-size: 3rem;
-    margin-bottom: 3.3rem;
-    color:#0b3f24;
-    font-family: 'Poppins', sans-serif;
-    text-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
+  font-size: 3rem;
+  margin-bottom: 3.3rem;
+  color:#0b3f24;
+  font-family: 'Poppins', sans-serif;
+  text-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
 }
 /* Left Side (Textarea + Button) */
 .contact-left {
-    flex: 1;
-    flex-direction: column;
-    padding: 4dvh 2dvh;
-    border-radius: 10px;
-    background: #f1f1f1;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  flex: 1;
+  flex-direction: column;
+  padding: 4dvh 2dvh;
+  border-radius: 10px;
+  background: #f1f1f1;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 textarea {
-    width: 100%;
-    height: 120px;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    resize: none;
-    background: transparent;
-    outline: none; 
-    font-family: 'Poppins', sans-serif;
+  width: 100%;
+  height: 120px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  resize: none;
+  background: transparent;
+  outline: none; 
+  font-family: 'Poppins', sans-serif;
 }
 
 /* Right Side (Input Fields) */
 .contact-right {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 
 }
 
 .contact-right input {
-    width: 100%;
-    padding: 2.5dvh;
-    border: none;
-    border-radius: 5px;
-    background: #f1f1f1;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    font-size: 14px;
-    font-family: 'Poppins', sans-serif;
+  width: 100%;
+  padding: 2.5dvh;
+  border: none;
+  border-radius: 5px;
+  background: #f1f1f1;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* Button Styling */
 .contact-section button {
-    background: #185C29;
-    color: white;
-    padding: 1dvh 5dvh;
-    border: none;
-    border-radius: 20px;
-    font-size: 0.7rem;
-    cursor: pointer;
-    margin-top: 10px;
-    font-family: 'Poppins', sans-serif;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+  background: #185C29;
+  color: white;
+  padding: 1dvh 5dvh;
+  border: none;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  cursor: pointer;
+  margin-top: 10px;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
 }
 
 .contact-section button:hover {
-    background: #0b3f24;
+  background: #0b3f24;
 }
 
 /* Footer Styles */
 
 .footer {
-    background-color: #1B3F1F; 
-    color: white;
-    padding: 50px 15px;
-    font-family: 'Poppins';
+  background-color: #1B3F1F; 
+  color: white;
+  padding: 50px 15px;
+  font-family: 'Poppins';
 }
 
 .footer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    max-width: 1200px;
-    margin: 0 auto;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
 }
 
 /* Left Section */
 .footer-left {
-    max-width: 500px;
+  max-width: 500px;
 }
 
 .logo-footer img {
-    height: 70px;
-    width: auto;
+  height: 70px;
+  width: auto;
 }
 
 .footer-text {
-    font-size: 14px;
-    font-family: 'poppins';
-    color: #ddd;
-    margin-top: 10px;
+  font-size: 14px;
+  font-family: 'poppins';
+  color: #ddd;
+  margin-top: 10px;
 }
 
 .social-icons {
-    margin-top: 15px;
-    display: flex;
-    gap: 12px;
+  margin-top: 15px;
+  display: flex;
+  gap: 12px;
 }
 
 .social-icons a img {
-    width: 35px;
-    height: 35px;
+  width: 35px;
+  height: 35px;
 }
 
 .social-icons a img,
 .footer-right ul li a img {
-    transition: transform 0.3s ease, filter 0.3s ease;
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 /* Scale effect with a slight brightness adjustment */
 .social-icons a:hover img,
 .footer-right ul li a:hover img {
-    transform: scale(1.1); /* Slightly enlarges the icon */
-    filter: brightness(1.3); /* Increases brightness to highlight */
+  transform: scale(1.1); /* Slightly enlarges the icon */
+  filter: brightness(1.3); /* Increases brightness to highlight */
 }
 
 
 /* Right Section */
 .footer-right {
-    text-align: left;
+  text-align: left;
 }
 
 .footer-right h3 {
-    color: #279B48;
-    font-size: 18px;
-    margin-bottom: 12px;
-    padding-left: 10px;
+  color: #279B48;
+  font-size: 18px;
+  margin-bottom: 12px;
+  padding-left: 10px;
 }
 
 .footer-right ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .footer-right ul li {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 14px;
-    color: #ddd;
-    margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #ddd;
+  margin-bottom: 8px;
 }
 
 .footer-right ul img {
-    width: 35px;
-    height: 35px;
+  width: 35px;
+  height: 35px;
 }
 
 
 .footer-bottom {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 1px solid #ccc;
-    padding: 20px 40px; 
-    padding-top: 10px;
-    margin-top: 20px;
-    font-size: 14px;
-    color: #ccc;
-    max-width: 90%; 
-    margin-left: auto;
-    margin-right: auto;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #ccc;
+  padding: 20px 40px; 
+  padding-top: 10px;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #ccc;
+  max-width: 90%; 
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footer-bottom::before,
 .footer-bottom::after {
-    content: "";
-    position: absolute;
-    top: -4px;
-    width: 6px;
-    height: 6px;
-    background-color: #ccc;
-    border-radius: 50%;
+  content: "";
+  position: absolute;
+  top: -4px;
+  width: 6px;
+  height: 6px;
+  background-color: #ccc;
+  border-radius: 50%;
 }
 
 .footer-bottom::before {
-    left: 0;
+  left: 0;
 }
 
 .footer-bottom::after {
-    right: 0;
+  right: 0;
 }
 
 
 .footer-links a {
-    color: white;
-    margin-left: 20px;
-    text-decoration: none;
-    font-size: 14px;
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-size: 14px;
 }
 
 .footer-links a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
-
-
-@media (max-width: 1440px){
-    /* NAVIGATION BAR */
-    .navigation-bar {
-        background: white;
-        height: 80px;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        padding: 0 30px;
-        position: fixed;
-        z-index: 9999;
-      }
-    
-      .navigation-bar .logo {
-        display: flex;
-        align-items: center;
-      }
-
-      .header-nav {
-        margin-left: -8rem;
-      }
-      
-      .navigation-bar .logo-img {
-        width: 110px;
-        height: auto;
-        margin-left: 3rem;
-      }
-      
-      .navigation-bar ul {
-        display: flex;
-        align-items: center;
-        
-    }
-
-    .navigation-bar ul.active {
-        display: flex;
-    }
-    
-    /* NAVIGATION ITEMS */
-    .navigation-bar ul li {
-        list-style: none;
-        margin: 0px 7px;
-        text-align: center;
-    }
-    
-    /* DEFAULT NAVIGATION LINKS */
-    .navigation-bar ul li a {
-        position: relative;
-        padding: 0px 13px;
-        text-decoration: none;
-        color: black;
-        font-size: 12px;
-    }
-    
-    .navigation-bar .active{
-        color: #638B35;
-    }
-    
-    .navigation-bar ul li a:hover {
-        color: #638B35;
-    
-    }
-    
-    /* ACTIVE LINK (Home) - Underline */
-    .navigation-bar ul li a.active::after,
-    .navigation-bar li a:hover::after {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 2.5px;
-        background-color: #638B35;
-        position: absolute;
-        bottom: -7px;
-        left: 0;
-    }
-    
-    
-    
-    /* Disable Underline for Buttons */
-    .navigation-bar ul li a.login-btn::after,
-    .navigation-bar ul li a.signup-btn::after {
-        display: none !important;
-    }
-    
-    
-    /* --- FINANCE HUB DROPDOWN --- */
-    /* --- FINANCE HUB DROPDOWN FIX --- */
-    .dropdown {
-        position: relative;
-        display: inline-block;
-    }
-    
-    /* Ensure dropdown stays hidden by default */
-    .dropdown-menu {
-        visibility: hidden;  
-        opacity: 0; 
-        position: absolute;
-        background-color: white;
-        min-width: 100%;
-        top: 100%;
-        left: 0;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-        border-radius: 5px;
-        z-index: 1000;
-        padding: 10px 0px;
-        
-    }
-
-    .dropdown-menu li a:hover::after {
-      width: 100%;
-      height: 1.5px;
-  }
-    /* Show dropdown only on hover */
-    .dropdown:hover .dropdown-menu {
-        visibility: visible;  /* Now it's visible */
-        opacity: 1; 
-    }
-    
-    /* Dropdown Items */
-    .dropdown-menu li {
-        list-style: none;
-        padding: 6px;
-    }
-    
-    /* Hover Effects */
-    .dropdown-menu li a:hover {
-        background-color: #f0f0f0;
-        color: #638B35;
-    }
-    
-    
-    /* SHOW DROPDOWN ON HOVER */
-    .dropdown:hover .dropdown-menu {
-        display: block;
-    }
-    
-    /* --- BUTTON STYLING --- */
-    .btn {
-        border-radius: 3px;
-        font-weight: 700;
-    }
-    
-    
-    /* LOGIN BUTTON */
-    .login-btn {
-        background: #638B35;
-        color: white;
-        border: none;
-    }
-    
-
-    a.btn.login-btn{
-        color: white;
-        padding: 5px 11px;
-    }
-    
-    .login-btn:hover {
-        background: white;
-        color: #638B35;
-        border: 2px solid #638B35;
-        padding: 4px 9px;
-    }
-    
-    /* SIGNUP BUTTON */
-    .signup-btn {
-        background: white;
-        color: #638B35;
-        border: 2px solid #638B35;
-    }
-    
-    .signup-btn:hover {
-        background: #d8ded2;
-        color: white;
-        border: none;
-        padding: 3.5px 7px;
-    }
-    
-    a.btn.signup-btn{
-      padding: 3.5px 9px;
-  }
-    
-    
-    
-      .navigation-bar .hamburger {
-        position: relative;
-        color: #0C3A1C;
-        margin-left: -80dvh;
-        display: block;
-        font-size: 13px;
-      }
-      
-      .navigation-bar .hamburger-toggle {
-        background: none;
-        border: none;
-        cursor: pointer;
-      }
-    
-      .navigation-bar .hamburger-toggle:hover {
-        color: #348751;
-      }
-      
-      .navigation-bar .hamburger-toggle i {
-        font-size: 18px;
-      }
-      
-      .navigation-bar .hamburger-menu {
-        position: absolute;
-        top: calc(100% + 5px);
-        right: -10px; 
-        background-color: #fff;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: none;
-      }
-      
-      .navigation-bar .hamburger:hover .hamburger-menu {
-        display: block;
-      }
-      
-      .navigation-bar .hamburger-menu li {
-        padding: 12px;
-      }
-      
-      .navigation-bar .hamburger-menu li:hover {
-        background-color: #f0f0f0;
-      }
-
-    }
-
-    
-@media (max-width: 1040px){
-    /* NAVIGATION BAR */
-    .navigation-bar {
-        background: white;
-        height: 70px;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        padding: 0 20px;
-        position: fixed;
-        z-index: 9999;
-      }
-    
-      .navigation-bar .logo {
-        display: flex;
-        align-items: center;
-      }
-
-      .header-nav {
-        margin-left: -25rem;
-      }
-      
-      .navigation-bar .logo-img {
-        width: 95px;
-        height: auto;
-        margin-left: 2rem;
-      }
-      
-      .navigation-bar ul {
-        display: flex;
-        align-items: center;
-        
-    }
-
-    .navigation-bar ul.active {
-        display: flex;
-    }
-    
-    /* NAVIGATION ITEMS */
-    .navigation-bar ul li {
-        list-style: none;
-        margin: 0px 7px;
-        text-align: center;
-    }
-    
-    /* DEFAULT NAVIGATION LINKS */
-    .navigation-bar ul li a {
-        position: relative;
-        padding: 0px 13px;
-        text-decoration: none;
-        color: black;
-        font-size: 11px;
-    }
-    
-    .navigation-bar .active{
-        color: #638B35;
-    }
-    
-    .navigation-bar ul li a:hover {
-        color: #638B35;
-    
-    }
-    
-    /* ACTIVE LINK (Home) - Underline */
-    .navigation-bar ul li a.active::after,
-    .navigation-bar li a:hover::after {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 2.5px;
-        background-color: #638B35;
-        position: absolute;
-        bottom: -7px;
-        left: 0;
-    }
-    
-    
-    
-    /* Disable Underline for Buttons */
-    .navigation-bar ul li a.login-btn::after,
-    .navigation-bar ul li a.signup-btn::after {
-        display: none !important;
-    }
-    
-    
-    /* --- FINANCE HUB DROPDOWN --- */
-    /* --- FINANCE HUB DROPDOWN FIX --- */
-    .dropdown {
-        position: relative;
-        display: inline-block;
-    }
-    
-    /* Ensure dropdown stays hidden by default */
-    .dropdown-menu {
-        visibility: hidden;  
-        opacity: 0; 
-        position: absolute;
-        background-color: white;
-        min-width: 100%;
-        top: 100%;
-        left: 0;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-        border-radius: 5px;
-        z-index: 1000;
-        padding: 10px 0px;
-        
-    }
-
-    .dropdown-menu li a:hover::after {
-      width: 100%;
-      height: 1.5px;
-  }
-    /* Show dropdown only on hover */
-    .dropdown:hover .dropdown-menu {
-        visibility: visible;  /* Now it's visible */
-        opacity: 1; 
-    }
-    
-    /* Dropdown Items */
-    .dropdown-menu li {
-        list-style: none;
-        padding: 6px;
-    }
-    
-    /* Hover Effects */
-    .dropdown-menu li a:hover {
-        background-color: #f0f0f0;
-        color: #638B35;
-    }
-    
-    
-    /* SHOW DROPDOWN ON HOVER */
-    .dropdown:hover .dropdown-menu {
-        display: block;
-    }
-    
-    /* --- BUTTON STYLING --- */
-    .btn {
-        border-radius: 3px;
-        font-weight: 700;
-    }
-    
-    
-    /* LOGIN BUTTON */
-    .login-btn {
-        background: #638B35;
-        color: white;
-        border: none;
-    }
-    
-
-    a.btn.login-btn{
-        color: white;
-        padding: 5px 11px;
-    }
-    
-    .login-btn:hover {
-        background: white;
-        color: #638B35;
-        border: 2px solid #638B35;
-        padding: 4px 9px;
-    }
-    
-    /* SIGNUP BUTTON */
-    .signup-btn {
-        background: white;
-        color: #638B35;
-        border: 2px solid #638B35;
-    }
-    
-    .signup-btn:hover {
-        background: #d8ded2;
-        color: white;
-        border: none;
-        padding: 3.5px 7px;
-    }
-    
-    a.btn.signup-btn{
-      padding: 3.5px 9px;
-  }
-    
-    
-    
-      .navigation-bar .hamburger {
-        position: relative;
-        color: #0C3A1C;
-        margin-left: -80dvh;
-        display: block;
-        font-size: 13px;
-      }
-      
-      .navigation-bar .hamburger-toggle {
-        background: none;
-        border: none;
-        cursor: pointer;
-      }
-    
-      .navigation-bar .hamburger-toggle:hover {
-        color: #348751;
-      }
-      
-      .navigation-bar .hamburger-toggle i {
-        font-size: 18px;
-      }
-      
-      .navigation-bar .hamburger-menu {
-        position: absolute;
-        top: calc(100% + 5px);
-        right: -10px; 
-        background-color: #fff;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: none;
-      }
-      
-      .navigation-bar .hamburger:hover .hamburger-menu {
-        display: block;
-      }
-      
-      .navigation-bar .hamburger-menu li {
-        padding: 12px;
-      }
-      
-      .navigation-bar .hamburger-menu li:hover {
-        background-color: #f0f0f0;
-      }
-
-
-/* FAQ Section */
-.faq-section {
-    text-align: center;
-    padding: 10rem 0.5rem;
-    background-color: #0F3714;
-}
-
-.faq-section h2 {
-    font-size: 3.5rem;
-    color: white;
-    font-weight: bold;
-    margin-bottom: 5rem;
-    font-family: 'Poppins', sans-serif;
-    text-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.3);
-}
-
-/* FAQ Categories */
-.faq-categories {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-    margin-bottom: 4rem;
-}
-
-.faq-category {
-    background-color: #638B35;
-    padding: 1.5rem;
-    border-radius: 1rem;
-    width: 8.375rem;
-    height: 8rem;
-    text-align: center;
-    cursor: pointer;
-    transition: 0.3s;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: 0.8rem 0.8rem 0.5rem rgba(0, 0, 0, 0.3);
-    border: none;
-    overflow: hidden;
-}
-
-.faq-category img {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    width: 66%;
-    height: 100%;
-    object-fit: cover;
-    margin-bottom: 0.5rem;
-}
-
-.faq-category p {
-    color: white;
-    font-size: 0.54rem;
-    font-family: 'Poppins', sans-serif;
-}
-
-.faq-category.active {
-    background-color: #185C29;
-    transform: translateY(-0.3125rem) scale(1.02);
-}
-
-/* FAQ List */
-#faq-list {
-    max-width: 700px;
-    margin: auto;
-    text-align: left;
-}
-
-.faq-item {
-    background-color: white;
-    padding: 0.8rem;
-    margin-bottom: 1.3rem;
-    border-radius: 8px;
-    box-shadow: 0.7rem 0.7rem 0.4rem rgba(0, 0, 0, 0.3);
-}
-
-.faq-question {
-    background: none;
-    border: none;
-    width: 100%;
-    color: #0C3A1C;
-    font-weight: 505;
-    font-size: 0.9rem;
-    margin-left: 1rem;
-    cursor: pointer;
-    padding: 2px 25px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-family: 'Poppins', sans-serif;
-}
-
-
-.faq-question::after {
-    content: "⮟";
-    font-weight: bolder;
-    font-size: 1rem;
-    font-family: 'Poppins', sans-serif;
-}
-
-.faq-answer {
-    display: none;
-    font-size: smaller;
-    padding: 10px 50px;
-    color: #000000;
-}
-
-/* Center the section */
-.contact-section {
-    text-align: center;
-    margin: 17dvh auto;
-    max-width: 100dvh;
-}
-
-
-
-      
-/* Footer */
-.footer {
-    padding: 2rem 9%; /* Reduced padding */
-  }
-  
-  .footer-container{
-    margin-bottom: -0.5rem;
-  }
-  
-  .footer-left {
-    max-width: 55%;
-    margin-bottom: 10px;
-  }
-  
-  .logo-footer img {
-    height: 2.3rem; /* Adjusted logo size */
-  }
-  
-  .footer-text {
-    font-size: 8px; /* Scaled-down font */
-    margin-top: 0.3rem;
-  }
-  
-  .social-icons {
-    margin-top: 0.75rem;
-    gap: 0.2rem; /* Adjusted spacing */
-  }
-  
-  .social-icons a img {
-    width: 1.5rem;
-    height: 1.5rem; /* Smaller social icons */
-  }
-  
-  .footer-right {
-    text-align: center; /* Centered text */
-  }
-  
-  .footer-right h3 {
-    font-size: 13px;
-    margin-bottom: 0.3rem;
-  }
-  
-  .footer-right ul li {
-    font-size: 8px;
-    gap: 0.3rem;
-    margin-bottom: 0.1rem;
-  }
-  
-  .footer-right ul img {
-    width: 1.5rem;
-    height: 1.5rem;
-  }
-  
-  .footer-bottom {
-    border-top: 1px solid #ccc;
-    padding: 1rem 1rem;
-    padding-top: 0.5rem;
-    color: #ccc;
-    max-width: 100%;
-    font-size: 8px;
-    
-  }
-  
-  .footer-links a {
-    font-size: 8px;
-  }
-  
-  .footer-bottom::before,
-  .footer-bottom::after {
-  content: "";
-  position: absolute;
-  top: -0.25rem;
-  width: 0.375rem;
-  height: 0.375rem;
-  background-color: #ccc;
-  border-radius: 50%;
-  }
-}
-
-    
-@media (max-width: 640px){
-    /* NAVIGATION BAR */
-    .navigation-bar {
-        background: white;
-        height: 40px;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        padding: 0 12px;
-        position: fixed;
-        z-index: 9999;
-      }
-    
-      .navigation-bar .logo {
-        display: flex;
-        align-items: center;
-      }
-
-      .header-nav {
-        margin-left: -22rem;
-      }
-      
-      .navigation-bar .logo-img {
-        width: 65px;
-        height: auto;
-        margin-left: 0.5rem;
-      }
-      
-      .navigation-bar ul {
-        display: flex;
-        align-items: center;
-        
-    }
-
-    .navigation-bar ul.active {
-        display: flex;
-    }
-    
-    /* NAVIGATION ITEMS */
-    .navigation-bar ul li {
-        list-style: none;
-        margin: 0px 1px;
-        text-align: center;
-    }
-    
-    /* DEFAULT NAVIGATION LINKS */
-    .navigation-bar ul li a {
-        position: relative;
-        padding: 0px 7px;
-        text-decoration: none;
-        color: black;
-        font-size: 7.5px;
-    }
-    
-    .navigation-bar .active{
-        color: #638B35;
-    }
-    
-    .navigation-bar ul li a:hover {
-        color: #638B35;
-    
-    }
-    
-    /* ACTIVE LINK (Home) - Underline */
-    .navigation-bar ul li a.active::after,
-    .navigation-bar li a:hover::after {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 2px;
-        background-color: #638B35;
-        position: absolute;
-        bottom: -4px;
-        left: 0;
-    }
-    
-    
-    
-    /* Disable Underline for Buttons */
-    .navigation-bar ul li a.login-btn::after,
-    .navigation-bar ul li a.signup-btn::after {
-        display: none !important;
-    }
-    
-    
-    /* --- FINANCE HUB DROPDOWN --- */
-    /* --- FINANCE HUB DROPDOWN FIX --- */
-    .dropdown {
-        position: relative;
-        display: inline-block;
-    }
-    
-    /* Ensure dropdown stays hidden by default */
-    .dropdown-menu {
-        visibility: hidden;  
-        opacity: 0; 
-        position: absolute;
-        background-color: white;
-        min-width: 74px;
-        top: 100%;
-        left: 0;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-        border-radius: 5px;
-        z-index: 1000;
-        padding: 8px 0px;
-        
-    }
-
-    .dropdown-menu li a:hover::after {
-      width: 100%;
-      height: 1.5px;
-  }
-    /* Show dropdown only on hover */
-    .dropdown:hover .dropdown-menu {
-        visibility: visible;  /* Now it's visible */
-        opacity: 1; 
-    }
-    
-    /* Dropdown Items */
-    .dropdown-menu li {
-        list-style: none;
-        padding: 3.5px;
-    }
-    
-    /* Hover Effects */
-    .dropdown-menu li a:hover {
-        background-color: #f0f0f0;
-        color: #638B35;
-    }
-    
-    
-    /* SHOW DROPDOWN ON HOVER */
-    .dropdown:hover .dropdown-menu {
-        display: block;
-    }
-    
-    /* --- BUTTON STYLING --- */
-    .btn {
-        padding: 7px 10px;
-        border-radius: 3px;
-        font-weight: 680;
-    }
-    
-    
-    /* LOGIN BUTTON */
-    .login-btn {
-        background: #638B35;
-        color: white;
-        border: none;
-    }
-    
-
-    a.btn.login-btn{
-        color: white;
-        padding: 4px 9px;
-    }
-    
-    .login-btn:hover {
-        background: white;
-        color: #638B35;
-        border: 2px solid #638B35;
-        padding: 4px 9px;
-    }
-    
-    /* SIGNUP BUTTON */
-    .signup-btn {
-        background: white;
-        color: #638B35;
-        border: 2px solid #638B35;
-    }
-    
-    .signup-btn:hover {
-        background: #d8ded2;
-        color: white;
-        border: none;
-        padding: 3.5px 7px;
-    }
-    
-    a.btn.signup-btn{
-      padding: 3.5px 7px;
-  }
-    
-    
-    
-      .navigation-bar .hamburger {
-        position: relative;
-        color: #0C3A1C;
-        margin-left: -70dvh;
-        display: block;
-        font-size: 10px;
-      }
-      
-      .navigation-bar .hamburger-toggle {
-        background: none;
-        border: none;
-        cursor: pointer;
-      }
-    
-      .navigation-bar .hamburger-toggle:hover {
-        color: #348751;
-      }
-      
-      .navigation-bar .hamburger-toggle i {
-        font-size: 12px;
-        margin-left: 30px;
-      }
-      
-      .navigation-bar .hamburger-menu {
-        position: absolute;
-        top: calc(100% + 5px);
-        right: -20px; 
-        background-color: #fff;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: none;
-      }
-      
-      .navigation-bar .hamburger:hover .hamburger-menu {
-        display: block;
-      }
-      
-      .navigation-bar .hamburger-menu li {
-        padding: 15px;
-      }
-      
-      .navigation-bar .hamburger-menu li:hover {
-        background-color: #f0f0f0;
-      }
-
-
-
-/* FAQ Section */
-.faq-section {
-    text-align: center;
-    padding: 5rem 2rem;
-    background-color: #0F3714;
-}
-
-.faq-section h2 {
-    font-size: 1.5rem;
-    color: white;
-    font-weight: bold;
-    margin-bottom: 3rem;
-    font-family: 'Poppins', sans-serif;
-    text-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.3);
-}
-
-/* FAQ Categories */
-.faq-categories {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-    margin-bottom: 4rem;
-}
-
-.faq-category {
-    background-color: #638B35;
-    padding: 1rem;
-    border-radius: 20px;
-    width: 10rem;
-    height: 8rem;
-    text-align: center;
-    cursor: pointer;
-    transition: 0.3s;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: 0.8rem 0.8rem 0.5rem rgba(0, 0, 0, 0.3);
-    border: none;
-    overflow: hidden;
-}
-
-.faq-category img {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    width: 66%;
-    height: 100%;
-    object-fit: cover;
-    margin-bottom: 0.5rem;
-}
-
-.faq-category p {
-    color: white;
-    font-size: 0.54rem;
-    font-family: 'Poppins', sans-serif;
-}
-
-.faq-category.active {
-    background-color: #185C29;
-    transform: translateY(-0.3125rem) scale(1.02);
-}
-
-/* FAQ List */
-#faq-list {
-    max-width: 700px;
-    margin: auto;
-    text-align: left;
-}
-
-.faq-item {
-    background-color: white;
-    padding: 10px;
-    margin-bottom: 1.3rem;
-    border-radius: 8px;
-    box-shadow: 0.7rem 0.7rem 0.4rem rgba(0, 0, 0, 0.3);
-}
-
-.faq-question {
-    background: none;
-    border: none;
-    width: 100%;
-    color: #0C3A1C;
-    font-weight: 505;
-    font-size: 12px;
-    margin-left: 1rem;
-    cursor: pointer;
-    padding: 2px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-family: 'Poppins', sans-serif;
-}
-
-
-.faq-question::after {
-    content: "⮟";
-    font-weight: bolder;
-    font-size: 12px;
-    font-family: 'Poppins', sans-serif;
-}
-
-.faq-answer {
-    display: none;
-    font-size: 10px;
-    padding: 10px 50px;
-    color: #000000;
-}
-
-/* Center the section */
-.contact-section {
-    max-width: 70dvh;
-}
-
-
-.contact-section h2 {
-    font-size: 1.5rem;
-
-}
-/* Left Side (Textarea + Button) */
-.contact-left {
-    flex: 1;
-    flex-direction: column;
-    padding: 2dvh 2dvh;
-    border-radius: 10px;
-    background: #f1f1f1;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-}
-
-textarea {
-    width: 100%;
-    height: 120px;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    resize: none;
-    background: transparent;
-    outline: none; 
-    font-family: 'Poppins', sans-serif;
-}
-
-/* Right Side (Input Fields) */
-.contact-right {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-
-}
-
-.contact-right input {
-    padding: 2dvh;
-    font-size: 12px;
-    
-}
-
-/* Button Styling */
-.contact-section button {
-    background: #185C29;
-    color: white;
-    padding: 1dvh 5dvh;
-    border: none;
-    border-radius: 20px;
-    font-size: 0.7rem;
-    cursor: pointer;
-    margin-top: 10px;
-    font-family: 'Poppins', sans-serif;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
-}
-
-.contact-section button:hover {
-    background: #0b3f24;
-}
-      
-      
-.footer {
-  padding: 2rem 9%; /* Reduced padding */
-  bottom: 0; /* Aligns the footer to the bottom of the viewport */
-  left: 0; /* Ensures the footer spans the full width */
-  width: 100%;
-}
-
-.footer-container{
-  margin-bottom: -0.5rem;
-}
-
-.footer-left {
-  max-width: 55%;
-  margin-bottom: 10px;
-  margin-left: 1.5rem;
-}
-
-.logo-footer img {
-  height: 2.3rem; /* Adjusted logo size */
-}
-
-.footer-text {
-  font-size: 8px; /* Scaled-down font */
-  margin-top: 0.3rem;
-}
-
-.social-icons {
-  margin-top: 0.75rem;
-  gap: 0.2rem; /* Adjusted spacing */
-}
-
-.social-icons a img {
-  width: 1.3rem;
-  height: 1.3rem; /* Smaller social icons */
-}
-
-.footer-right {
-  text-align: center; /* Centered text */
-  margin-right: 1.5rem;
-}
-
-.footer-right h3 {
-  font-size: 13px;
-  margin-bottom: 0.3rem;
-}
-
-.footer-right ul li {
-  font-size: 8px;
-  gap: 0.3rem;
-  margin-bottom: 0.1rem;
-}
-
-.footer-right ul img {
-  width: 1.3rem;
-  height: 1.3rem;
-}
-
-.footer-bottom {
-  border-top: 1px solid #ccc;
-  padding: 1rem 1rem;
-  padding-top: 0.5rem;
-  color: #ccc;
-  max-width: 100%;
-  font-size: 8px;
-  
-}
-
-.footer-links a {
-  font-size: 8px;
-}
-
-.footer-bottom::before,
-.footer-bottom::after {
-content: "";
-position: absolute;
-top: -0.25rem;
-width: 0.375rem;
-height: 0.375rem;
-background-color: #ccc;
-border-radius: 50%;
-}
-    }
