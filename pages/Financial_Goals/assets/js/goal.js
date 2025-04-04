@@ -8,9 +8,9 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
     }
 
-    // Fetch goals from API and store them in localStorage
+    // Fetch goals from API 
     function fetchGoalsFromAPI() {
-        axios.get(`https://demo-api-skills.vercel.app/api/FinanceManager/users/${userId}/goals`)
+        axios.get(`https://demo-api-skills.vercel.app/api/FinanceManager/goals/user/${userId}`)
             .then(response => {
                 const goals = response.data || [];
                 localStorage.setItem("goals", JSON.stringify(goals));
@@ -21,14 +21,8 @@ document.addEventListener("DOMContentLoaded", function () {
             });
     }
 
-    // Load goals from localStorage or API
     function loadGoals() {
-        const storedGoals = localStorage.getItem("goals");
-        if (storedGoals) {
-            displayGoals(JSON.parse(storedGoals));
-        } else {
             fetchGoalsFromAPI();
-        }
     }
 
     // Function to display goals in the table
